@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.otf') format('otf'),
+         url('fonts/Gilroy-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-ExtraBold.otf') format('otf'),
+         url('fonts/Gilroy-ExtraBold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    background-size: 100%;
+    background-image: url(../Assets/Frame\ 88.svg);
+    background-position-x: center;
+    margin: 0;
+    padding: 0;
+}
+.container2
+{
+    width: 100%;
+
+    margin: auto;
+
+}
+.container {
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    
+}
+
+/* Шапка */
+header {
+    margin-left: 10%;
+    margin-top: 5%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 95px; /* Добавляет отступы между кнопками */
+
+}
+
+.logo {
+    width: 150px;
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal; /* Применяем стандартный вес */
+}
+
+.button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+    border: none;
+    padding: 10px 20px;
+    color: #0f1f23;
+    cursor: pointer;
+    border-radius: 25px; /* Закругленные углы */
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: bold; /* Применяем жирный вариант шрифта */
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
+    
+}
+/* Эффект наведения */
+.button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+}
+
+.main {
+    text-align: center;
+    padding: 50px 0; /* Отступ сверху и снизу */
+}
+
+.main-buttons {
+    display: flex; /* Используем flex для кнопок */
+}
+
+.main-buttons button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+    border: none; /* Убираем обводку */
+    padding: 10px 20px; /* Отступы внутри кнопок */
+    color: #0f1f23; /* Цвет текста кнопок */
+    cursor: pointer; /* Курсор при наведении */
+    border-radius: 25px; /* Закругленные углы */
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: bold; /* Жирный шрифт */
+    margin-left: 10px; /* Отступ между кнопками */
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
+}
+.main-buttons button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+}
+
+.about, .heroes, .register, .merch, .participants {
+    padding: 50px 0;
+    
+    text-align: center;
+}
+
+.hero-card, .merch-item, .participant {
+    background-color: #112a30;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.hero-card button, .read-more, .participants .tabs button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+    color: #0f1f23;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px; /* Закругленные углы */
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: bold; /* Применяем жирный вариант шрифта */
+    margin: 10px 0;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
+}
+/* Эффект наведения */
+.hero-card button:hover,
+.read-more:hover,
+.participants .tabs button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+}
+
+
+h1, h2, h3 {
+    color: #42c1c7;
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: bold; /* Применяем жирный вариант шрифта */
+}
+.merch-carousel {
+    text-align: center;
+    color: #7be8ee; /* Цвет заголовка */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирует карусель */
+
+    position: relative;
+    width: 100%; /* Устанавливает ширину контейнера карусели */
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden; /* Скрывает элементы за пределами видимой области */
+    width: 50%; /* Устанавливает ширину карусели */
+    scroll-behavior: smooth;
+}
+
+.carousel-item {
+    flex: 0 0 25%; /* Устанавливает ширину каждого элемента в 25% контейнера */
+    text-align: center;
+    padding: 10px;
+    background: #0f1f23; /* Цвет фона каждого элемента */
+    border-radius: 10px;
+    margin: 0 8px;
+    color: white;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.price-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #42c1c7;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.price-add span {
+    font-weight: bold;
+    color: #0f1f23;
+}
+
+.price-add button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-btn {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 520px;
+}
+
+.next-btn {
+    right: 520px;
+}
+.participants {
+    text-align: center;
+    color: #7be8ee;
+    padding: 40px 0;
+}
+
+.participants .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.participants .tabs button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee);
+    color: #0f1f23;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: bold;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p, footer a {
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+}

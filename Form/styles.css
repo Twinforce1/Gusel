@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.otf') format('otf'),
+         url('fonts/Gilroy-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-ExtraBold.otf') format('otf'),
+         url('fonts/Gilroy-ExtraBold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    background-size: 100%;
+    background-image: url(../Assets/Frame\ 88.svg);
+    background-position-x: center;
+    margin: 0;
+    padding: 0;
+}
+.container2
+{
+    width: 100%;
+
+    margin: auto;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    
+    
+}
+
+/* Шапка */
+header {
+    margin-left: 10%;
+    margin-top: 5%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 95px; /* Добавляет отступы между кнопками */
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal; /* Применяем стандартный вес */
+}
+
+.button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+    border: none;
+    padding: 10px 20px;
+    color: #0f1f23;
+    cursor: pointer;
+    border-radius: 25px; /* Закругленные углы */
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: bold; /* Применяем жирный вариант шрифта */
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
+    
+}
+/* Эффект наведения */
+.button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+}
+
+/* Форма */
+.application-form {
+    
+    border-radius: 10px;
+    padding: 30px;
+    width: 600px;
+    margin-top: 60px;
+    margin-left: 300px;
+    
+    position: relative;
+}
+
+.container h1 {
+    text-align: left;
+    color: #7be8ee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    margin-right: 15px; /* Уменьшает отступ справа для меток */
+    display: inline-flex; /* Размещает радиокнопки и текст в строку */
+    align-items: center; /* Выравнивание по центру */
+
+}
+.radio-item {
+    margin-top: 15px;
+    margin-bottom: 10px; /* Отступ между радиокнопками */
+}
+
+.form-group input,
+.form-group select {
+    margin-right: 10px;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #42c1c7;
+    border-radius: 45px; /* Закругленные углы */
+    background-color: white; /* Белый фон внутри поля */
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: #000000;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.form-group p {
+    margin: 0 0 5px;
+    color: #7be8ee;
+}
+
+button.submit-button {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    width: 30%;
+    padding: 12px;
+    background: linear-gradient(90deg, #42c1c7, #7be8ee);
+    color: #0f1f23;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+button.submit-button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7);
+}
+
+/* Подвал */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет для затемнения */
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    bottom: 0; /* Прикрепляет футер к низу */
+    width: 100%; /* Ширина футера на 100% */
+}
+
+footer a {
+    color: #7be8ee;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #42c1c7;
+}

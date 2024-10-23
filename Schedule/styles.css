@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.otf') format('otf'),
+         url('fonts/Gilroy-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-ExtraBold.otf') format('otf'),
+         url('fonts/Gilroy-ExtraBold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    background-size: 100%;
+    background-image: url(../Assets/Frame\ 88.svg);
+    background-position-x: center;
+    margin: 0;
+    padding: 0;
+}
+.container2
+{
+    width: 100%;
+
+    margin: auto;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    
+}
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00b0b9;
+}
+
+p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.directions {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 330px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.custom-map {
+    width: 40%;
+    height: 300px;
+    background-color: #ffffff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.maps-links {
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 330px;
+}
+
+.map-link {
+    width: 100%;
+    text-align: center;
+}
+
+.map-link h3 {
+    font-size: 24px;
+    color: #00b0b9;
+    margin-bottom: 10px;
+
+}
+
+.map-placeholder {
+
+    width: 70%;
+    height: 300px;
+    background-color: #ffffff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.schedule {
+    margin-top: 40px;
+    margin-left: 330px;
+}
+
+.schedule h2 {
+    font-size: 32px;
+    color: #00b0b9;
+}
+
+/* Шапка */
+header {
+    margin-left: 10%;
+    margin-top: 5%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 95px; /* Добавляет отступы между кнопками */
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal; /* Применяем стандартный вес */
+}
+
+.button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+    border: none;
+    padding: 10px 20px;
+    color: #0f1f23;
+    cursor: pointer;
+    border-radius: 25px; /* Закругленные углы */
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: bold; /* Применяем жирный вариант шрифта */
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
+    
+}
+/* Эффект наведения */
+.button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+}
+
+
+
+/* Подвал */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет для затемнения */
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 310px;
+    bottom: 0; /* Прикрепляет футер к низу */
+    width: 100%; /* Ширина футера на 100% */
+}
+
+footer a {
+    color: #7be8ee;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #42c1c7;
+}

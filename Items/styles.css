@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.otf') format('otf'),
+         url('fonts/Gilroy-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-ExtraBold.otf') format('otf'),
+         url('fonts/Gilroy-ExtraBold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    background-size: 100%;
+    background-image: url(../Assets/Frame\ 88.svg);
+    background-position-x: center;
+    margin: 0;
+    padding: 0;
+}
+.container2
+{
+    width: 100%;
+
+    margin: auto;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    
+}
+
+
+/* Шапка */
+header {
+    margin-left: 10%;
+    margin-top: 5%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 95px; /* Добавляет отступы между кнопками */
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal; /* Применяем стандартный вес */
+}
+
+.button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+    border: none;
+    padding: 10px 20px;
+    color: #0f1f23;
+    cursor: pointer;
+    border-radius: 25px; /* Закругленные углы */
+    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-weight: bold; /* Применяем жирный вариант шрифта */
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
+    
+}
+/* Эффект наведения */
+.button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+}
+
+main {
+    padding: 40px;
+    margin-top: 200px;
+}
+
+.product {
+    margin-left: 300px;
+    display: flex;
+    gap: 500px;
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.main-image {
+    background-color: #ccc;
+    width: 522px;
+    height: 522px;
+    margin-bottom: 10px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.thumbnail {
+    background-color: #ccc;
+    width: 154px;
+    height: 154px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Расстояние между элементами */
+    text-align: center;
+    position: relative;
+    margin-right: 300px;
+    margin-left: -110px;
+
+}
+
+.product-info h1 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #ffffff;
+    margin-left: 200px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-info .btn {
+    background-color: #00b0b9;
+    padding: 10px 20px;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.related-products {
+    margin-top: 100px;
+    text-align: center;
+    padding: 40px;
+}
+
+.related-products h2 {
+    margin-left: 250px;
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00b0b9;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.product-card {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 10px;
+    min-width: 200px;
+}
+
+.product-card .image {
+    background-color: #ccc;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px auto;
+}
+
+.product-card p {
+    margin: 5px 0;
+}
+
+.product-card .price {
+    color: #00b0b9;
+}
+
+.carousel-btn {
+    background-color: #00b0b9;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.left-btn {
+    margin-right: 20px;
+}
+
+.right-btn {
+    margin-left: 20px;
+}
+
+.carousel-btn:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+}
+
+/* Подвал */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет для затемнения */
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 310px;
+    bottom: 0; /* Прикрепляет футер к низу */
+    width: 100%; /* Ширина футера на 100% */
+}
+
+footer a {
+    color: #7be8ee;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #42c1c7;
+}
