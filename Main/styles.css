@@ -235,8 +235,9 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 
 .text-with-buttons {
     align-content: start;
-    margin: 0px 0px 0px 100px;
+    margin: 0px 0px 0px 76px;
     text-align: right;
+    width: 815px;
 }
 
 .photos2-track {
@@ -413,7 +414,7 @@ h1 {
 .photo-carousel {
     flex-direction: column;
     gap: 20px;
-    width: 708px;
+    width: 100%;
 }
 
 .hero-track, .merch-track, .yakovlev-track, .panin-track, .photos1-track, .photos2-track {
