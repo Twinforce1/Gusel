@@ -8,235 +8,289 @@
     <link rel="icon" href="C:\Users\vazge\OneDrive\Рабочий стол\Gusel\Assets\_Контент.svg" type="image/x-icon">
 </head>
 <body>
-    <div class="container2">
-        <div class="container">
+    <div class="main_container">
+        <div class="inner_container">
             <!-- Шапка -->
             <header>
-                
                 <nav>
                     <ul>
-                        <li><a href="../Main/index.html"><img src="../Assets/haha-classic (2).png" alt="Лого" class="logo" width="114px" height="44px"></a></li>
-                        <li><a href="../Items/items.html">Атрибутика</a></li>
+                        <li><a href="../Main/index.html" class="logo-ref"><img src="../Assets/haha-classic.png" alt="Лого" class="logo-header" width="114px" height="44px"></a></li>
                         <li><a href="#about">О проекте</a></li>
+                        <li><a href="../Items/items.html">Атрибутика</a></li>
                         <li><a href="../Hero_uk/hero_uk.html">Герои УК</a></li>
-                        <li><a href="../Form/form.html" class="button">Заявка на участие</a></li>
+                        <a href="../Form/form.html" class="text-button-color"><li class="header-button"><img src="../Assets/pen-tool.svg" class="button-img">Заявка на участие</li></a>
                     </ul>
                 </nav>
-            
             </header>
 
             <!-- Главный блок -->
             <section class="main">
-                
                     <img src="../Assets/_Контент.svg" alt="Уральская Классика Лого" class="main-logo">
-                    <div class="main-buttons">
-                        <button>Где? Когда?</button>
-                        <button>Билеты</button>
-                        <button>Участники</button>
+                    <div class="text-with-buttons">
+                        <div class="photo-carousel">
+                            <div class="photos1-track">
+                                <div class="photo-item">
+                                    <img src="../Assets/kot1.webp" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot2.jpg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot3.jpg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot4.jpg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot5.jpeg" class="carousel2-photo">
+                                </div>
+                            </div>
+                            <div class="photos2-track">
+                                <div class="photo-item">
+                                    <img src="../Assets/kot5.jpeg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot4.jpg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot3.jpg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot2.jpg" class="carousel2-photo">
+                                </div>
+                                <div class="photo-item">
+                                    <img src="../Assets/kot1.webp" class="carousel2-photo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-buttons">
+                            <a href="#" class="text-button-color"><img src="../Assets/pin.svg" class="button-img">Где? Когда?</a>
+                            <a href="#" class="text-button-color"><img src="../Assets/ticket.svg" class="button-img">Билеты</a>
+                            <a href="#" class="text-button-color"><img src="../Assets/users.svg" class="button-img">Участники</a>
+                        </div>
                     </div>
                 
             </section>
 
             <!-- О проекте -->
             <section id="about" class="about">
-                
-                    <h2>О проекте</h2>
-                    <p>Уральская классика - это уникальное событие в российском спорте, органично сочетающее:<br>- Профессиональных спортсменов и блогеров, их близость к зрителям, детям и СМИ<br>- Игра не на стадионе, а на естественном льду озера, как символ возвращения в детство, к истокам</p>
-                    <button class="read-more">Еще описание</button>
-                
+                    <h1>О проекте</h1>
+                    <p>Уральская классика - это уникальное событие в российском спорте, органично сочетающее:
+                        <br>- Профессиональных спортсменов и блогеров, их близость к зрителям, детям и СМИ
+                        <br>- Игра не на стадионе, а на естественном льду озера, как символ возвращения в детство, к истокам
+                    </p>
+                    <div class="button-arrow">
+                        <a href="#" class="text-button-color"><img src="../Assets/receipt.svg" class="button-img">За вдохновением</a>
+                        <img src="../Assets/arrow.svg" alt="arrow" class="arrow">
+                    </div>
             </section>
 
             <!-- Герои -->
             <section id="heroes" class="heroes">
-                
-                    <h2>Герои "Уральской классики"</h2>
-                    <div class="hero-card">
-                        <img src="hero.jpg" alt="Имя Фамилия">
-                        <h3>Имя Фамилия</h3>
-                        <p>Краткое описание героя...</p>
-                        <button>Читать про всех героев</button>
+                <h1>Герои "Уральской классики"</h1>
+                <p>Расскажи свою историю, как Уральская Классика повлияла на твою жизнь!</p>
+                <div class="button-arrow">
+                    <a href="#" class="text-button-color"><img src="../Assets/star.svg" class="button-img">Стань героем</a>
+                    <img src="../Assets/arrow.svg" class="arrow">
+                </div>
+                <div class="hero-container">
+                    <button class="carousel-btn prev-btn"><img src="../Assets/arrow2.svg" class="carousel-button-img1"></button> <!-- Кнопка для прокрутки влево -->
+                    <div class="hero-carousel">
+                        <div class="hero-track">
+                            <div class="hero-item">
+                                <div class="img-container"><img src="../Assets/hockey1.jpg" alt="Фото" class="img-carousel"></div>
+                                <div class="card-inside">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                    <h1>Имя Фамилия</h1>
+                                </div>
+                            </div>
+                            <div class="hero-item">
+                                <div class="img-container"><img src="../Assets/hockey2.jpg" alt="Фото" class="img-carousel"></div>
+                                <div class="card-inside">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <h1>Имя Фамилия</h1>
+                                </div>
+                            </div>
+                            <div class="hero-item">
+                                <div class="img-container"><img src="../Assets/hockey3.jpg" alt="Фото" class="img-carousel"></div>
+                                <div class="card-inside">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <h1>Имя Фамилия</h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                
+                    <button class="carousel-btn next-btn"><img src="../Assets/arrow2.svg" class="carousel-button-img2"></button> <!-- Кнопка для прокрутки вправо -->
+                </div>
+                <div class="button-center">
+                    <a href="#" class="text-button-color"><img src="../Assets/trophy.svg" class="button-img">Читать про всех героев</a>
+                </div>
             </section>
 
             <!-- Регистрация детей -->
             <section id="register" class="register">
-                
-                    <h2>Регистрация детей</h2>
-                    <p>По традиции на лед вместе с профессионалами и приглашенными звездами выйдут играть дети! <br><br> Открыт конкурс для участников в возрасте от 6 до 14 лет<br><br>Чтобы стать участником, нужно:<br>- Снять видео и рассказать, почему ты должен попасть в одну из команд - Григория Панина или Егора Яковлева<br>- Выложить свое видео в ВК Клипы<br>- Заполнить форму для участия<br><br><b>Набор продлится до 8 декабря<b><br><br></p>
+                    <h1>Регистрация детей</h1>
+                    <p>По традиции на лед вместе с профессионалами<br>и приглашенными звездами выйдут играть дети! <br><br> Открыт конкурс для участников в возрасте от 6 до 14 лет<br><br>Чтобы стать участником, нужно:<br>- Снять видео и рассказать, почему ты должен попасть в одну из команд - Григория Панина или Егора Яковлева<br>- Выложить свое видео в ВК Клипы<br>- Заполнить форму для участия<br><br><b>Набор продлится до 8 декабря<b></p>
                     <p style="color:#42c1c7">* При большом кол-ве заявок, предпочтение будет отдаваться детям, которые ранее не принимали участие.</p>
-                    <button class="button">Заявка на участие</button>
-                
+                    <div class="button-arrow">
+                        <a href="#" class="text-button-color"><img src="../Assets/pin.svg" class="button-img">Заявка на участие</a>
+                        <img src="../Assets/arrow.svg" class="arrow">
+                    </div>
             </section>
 
             <!-- Атрибутика -->
             <section class="merch-carousel">
-                <h2>Атрибутика</h2>
-                <div class="carousel-container">
-                    <button class="carousel-btn prev-btn">&#8592;</button> <!-- Кнопка для прокрутки влево -->
-                    <div class="carousel">
-                        <div class="carousel-item">
-                            <img src="Assets/shirt.png" alt="Футболка">
-                            <p>Футболка</p>
-                            <div class="price-add">
-                                <span>2500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
+                <h1>Атрибутика</h1>
+                <div class="merch-container">
+                    <button class="carousel-btn2 prev-btn2"><img src="../Assets/arrow2.svg" class="carousel-button-img1"></button>
+                    <div class="merch">
+                        <div class="merch-track">
+                            <div class="merch-item">
+                                <img src="../Assets/shirt.webp" alt="Футболка" class="carousel-photo">
+                                <p>Футболка</p>
+                                <div class="price-add">
+                                    <a href="#" class="text-button-color price">2500₽</a>
+                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/cap.png" alt="Кепка">
-                            <p>Кепка</p>
-                            <div class="price-add">
-                                <span>1000₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
+                            <div class="merch-item">
+                                <img src="../Assets/cap.jpeg" alt="Кепка" class="carousel-photo">
+                                <p>Кепка</p>
+                                <div class="price-add">
+                                    <a href="#" class="text-button-color price">1000₽</a>
+                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/bracelet.png" alt="Браслет">
-                            <p>Браслет</p>
-                            <div class="price-add">
-                                <span>500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
+                            <div class="merch-item">
+                                <img src="../Assets/bracelet.webp" alt="Браслет" class="carousel-photo">
+                                <p>Браслет</p>
+                                <div class="price-add">
+                                    <a href="#" class="text-button-color price">500₽</a>
+                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/hat.png" alt="Шапка">
-                            <p>Шапка</p>
-                            <div class="price-add">
-                                <span>1500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
+                            <div class="merch-item">
+                                <img src="../Assets/hat.jpg" alt="Шапка" class="carousel-photo">
+                                <p>Шапка</p>
+                                <div class="price-add">
+                                    <a href="#" class="text-button-color price">1500₽</a>
+                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/hat.png" alt="Шапка">
-                            <p>Шапка</p>
-                            <div class="price-add">
-                                <span>1500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/hat.png" alt="Шапка">
-                            <p>Шапка</p>
-                            <div class="price-add">
-                                <span>1500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/hat.png" alt="Шапка">
-                            <p>Шапка</p>
-                            <div class="price-add">
-                                <span>1500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/hat.png" alt="Шапка">
-                            <p>Шапка</p>
-                            <div class="price-add">
-                                <span>1500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets/hat.png" alt="Шапка">
-                            <p>Шапка</p>
-                            <div class="price-add">
-                                <span>1500₽</span>
-                                <button class="add-to-cart"><img src="Assets/cart-icon.svg" alt="Корзина"></button>
+                            <div class="merch-item">
+                                <img src="../Assets/puck.webp" alt="Шайба" class="carousel-photo">
+                                <p>Шайба</p>
+                                <div class="price-add">
+                                    <a href="#" class="text-button-color price">1000₽</a>
+                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-btn next-btn">&#8594;</button> <!-- Кнопка для прокрутки вправо -->
+                    <button class="carousel-btn2 next-btn2"><img src="../Assets/arrow2.svg" class="carousel-button-img2"></button>
                 </div>
             </section>
             
 
             <!-- Участники -->
             <section class="participants">
-                
-                    <h2>Участники</h2>
-                    <p>Посмотри звездных игроков прошлых турниров</p>
-                    <div class="tabs">
-                        <button>Лето 2024</button>
-                        <button>Зима 2023</button>
-                        <button>2022</button>
-                    </div>
-            
-                    <!-- Команда Яковлева -->
-                    <h3>Команда Яковлева</h3>
-                    <div class="carousel-container">
-                        <button class="carousel-btn prev-btn">&#8592;</button>
-                        <div class="carousel">
-                            <div class="carousel-item">
-                                <img src="player1.jpg" alt="Алексей Никитин">
-                                <p>Алексей Никитин</p>
-                                <span>Описание</span>
+                <h1>Участники</h1>
+                <p>Посмотри звездных игроков прошлых турниров</p>
+                <div class="tabs">
+                    <a href="#" class="text-button-color">Лето 2024</a>
+                    <a href="#" class="text-button-color">Зима 2023</a>
+                    <a href="#" class="text-button-color">2022</a>
+                </div>
+        
+                <!-- Команда Яковлева -->
+                <h1>Команда Яковлева</h1>
+                <div class="yakovlev-container">
+                    <button class="carousel-btn3 prev-btn3"><img src="../Assets/arrow2.svg" class="carousel-button-img1"></button>
+                    <div class="carousel">
+                        <div class="yakovlev-track">
+                            <div class="yakovlev-item">
+                                <img src="../Assets/kot1.webp" alt="Алексей Никитин" class="carousel-photo">
+                                <h2>Алексей Никитин</h2>
+                                <p>Описание</p>
                             </div>
-                            <div class="carousel-item">
-                                <img src="player2.jpg" alt="Михаил Волков">
-                                <p>Михаил Волков</p>
-                                <span>Описание</span>
+                            <div class="yakovlev-item">
+                                <img src="../Assets/kot2.jpg" alt="Михаил Волков" class="carousel-photo">
+                                <h2>Михаил Волков</h2>
+                                <p>Описание</p>
                             </div>
-                            <div class="carousel-item">
-                                <img src="player3.jpg" alt="Сергей Морозов">
-                                <p>Сергей Морозов</p>
-                                <span>Описание</span>
+                            <div class="yakovlev-item">
+                                <img src="../Assets/kot3.jpg" alt="Сергей Морозов" class="carousel-photo">
+                                <h2>Сергей Морозов</h2>
+                                <p>Описание</p>
                             </div>
-                            <div class="carousel-item">
-                                <img src="player4.jpg" alt="Владимир Соколов">
-                                <p>Владимир Соколов</p>
-                                <span>Описание</span>
+                            <div class="yakovlev-item">
+                                <img src="../Assets/kot4.jpg" alt="Владимир Соколов" class="carousel-photo">
+                                <h2>Владимир Соколов</h2>
+                                <p>Описание</p>
                             </div>
-                        </div>
-                        <button class="carousel-btn next-btn">&#8594;</button>
-                    </div>
-            
-                    <!-- Команда Панина -->
-                    <h3>Команда Панина</h3>
-                    <div class="carousel-container">
-                        <button class="carousel-btn prev-btn">&#8592;</button>
-                        <div class="carousel">
-                            <div class="carousel-item">
-                                <img src="player5.jpg" alt="Павел Романов">
-                                <p>Павел Романов</p>
-                                <span>Описание</span>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="player6.jpg" alt="Андрей Зуев">
-                                <p>Андрей Зуев</p>
-                                <span>Описание</span>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="player7.jpg" alt="Игорь Лебедев">
-                                <p>Игорь Лебедев</p>
-                                <span>Описание</span>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="player8.jpg" alt="Артём Киселёв">
-                                <p>Артём Киселёв</p>
-                                <span>Описание</span>
+                            <div class="yakovlev-item">
+                                <img src="../Assets/kot5.jpeg" alt="Иван Иванов" class="carousel-photo">
+                                <h2>Иван Иванов</h2>
+                                <p>Описание</p>
                             </div>
                         </div>
-                        <button class="carousel-btn next-btn">&#8594;</button>
                     </div>
-                
+                    <button class="carousel-btn3 next-btn3"><img src="../Assets/arrow2.svg" class="carousel-button-img2"></button>
+                </div>
+        
+                <!-- Команда Панина -->
+                <h1>Команда Панина</h1>
+                <div class="panin-container">
+                    <button class="carousel-btn4 prev-btn4"><img src="../Assets/arrow2.svg" class="carousel-button-img1"></button>
+                    <div class="carousel">
+                        <div class="panin-track">
+                            <div class="panin-item">
+                                <img src="../Assets/pes1.jpg" alt="Павел Романов" class="carousel-photo">
+                                <h2>Павел Романов</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="../Assets/pes2.jpg" alt="Андрей Зуев" class="carousel-photo">
+                                <h2>Андрей Зуев</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="../Assets/pes3.jpg" alt="Игорь Лебедев" class="carousel-photo">
+                                <h2>Игорь Лебедев</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="../Assets/pes4.webp" alt="Артём Киселёв" class="carousel-photo">
+                                <h2>Артём Киселёв</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="../Assets/pes5.jpg" alt="Виталий Лукащук" class="carousel-photo">
+                                <h2>Виталий Лукащук</h2>
+                                <p>Описание</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn4 next-btn4"><img src="../Assets/arrow2.svg" class="carousel-button-img2"></button>
+                </div>
             </section>
-            
-            
-
-            <!-- Футер -->
-            <footer>
-                
-                    <p>Хотите стать партнером? <a href="#">Напишите нам!</a></p>
-                    <p>Для СМИ <a href="#">media@uk.ru</a></p>
-                    <p>VK: <a href="#">vk.com/ural_classics</a></p>
-                
-            </footer>
-
             <script src="script.js"></script>
         </div>
     </div>
+    <!-- Футер -->
+    <footer>
+        <div class="foot1">
+            <p>Хотите стать партнером?
+                - почта ___</p>
+        </div>
+        <div class="foot2">
+            <p>Для СМИ
+                - почта ___</p>
+        </div>
+        <div class="foot3">
+            <p>ТГ проекта <a href="http://t.me/ural_classics">t.me/ural_classics</a>
+            ВК проекта <a href="https://vk.com/ural_classics">vk.com/ural_classics</a></p>
+        </div>
+    </footer>
 </body>
 </html>
