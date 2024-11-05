@@ -151,7 +151,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     cursor: pointer;
     border-radius: 18px;
     font-family: 'Gilroy', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 22px;
     transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
     align-content: center;

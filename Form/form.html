@@ -5,117 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма заявки - Уральская Классика</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="C:\Users\vazge\OneDrive\Рабочий стол\Gusel\Assets\_Контент.svg" type="image/x-icon">
+    <link rel="icon" href="../Assets/_Контент.svg" type="image/x-icon">
 </head>
 <body>
-    <div class="container2">
-        <div class="container">
-            <!-- Шапка -->
+    <div class="main_container">
+        <div class="inner_container">
+
             <header>
-                
                 <nav>
                     <ul>
-                        <li><a href="../Main/index.html"><img src="../Assets/haha-classic (2).png" alt="Лого" class="logo" width="114px" height="44px"></a></li>
-                        <li><a href="../Items/items.html">Атрибутика</a></li>
+                        <li><a href="../Main/index.html" class="logo-ref"><img src="../Assets/haha-classic.png" alt="Лого" class="logo-header" width="114px" height="44px"></a></li>
                         <li><a href="#about">О проекте</a></li>
+                        <li><a href="../Items/items.html">Атрибутика</a></li>
                         <li><a href="../Hero_uk/hero_uk.html">Герои УК</a></li>
-                        <li><a href="../Form/form.html" class="button">Заявка на участие</a></li>
+                        <a href="../Form/form.html" class="text-button-color"><li class="header-button"><img src="../Assets/pen-tool.svg" class="button-img">Заявка на участие</li></a>
                     </ul>
                 </nav>
-            
             </header>
 
-            <!-- Главный блок с формой заявки -->
             <section class="application-form">
                 
-                    <h1>Подай заявку на участие</h1>
-                    <form action="#" method="post">
-                        <!-- ФИО -->
-                        <div class="form-group">
-                            <input type="text" id="fullName" name="fullName" placeholder="ФИО" required>
-                        </div>
-                        
-                        <!-- Ссылка на видео -->
-                        <div class="form-group">
-                            <input type="url" id="videoLink" name="videoLink" placeholder="Ссылка на видео-заявку в ВК для участия" required>
-                        </div>
-                        
-                        <!-- Амплуа -->
-                        <div class="form-group">
-                            <p>Амплуа:</p>
-                            <div class="radio-item">
-                                <label><input type="radio" name="position" value="goalkeeper" required> Вратарь</label>
-                            </div>
-                            <div class="radio-item">
-                                <label><input type="radio" name="position" value="defender"> Защитник</label>
-                            </div>
-                            <div class="radio-item">
-                                <label><input type="radio" name="position" value="forward"> Нападающий</label>
-                            </div>
-                        </div>
-                        
-                        <!-- Желаемая команда -->
-                        <div class="form-group">
-                            <p>Желаемая команда:</p>
-                            <div class="radio-item">
-                                <label><input type="radio" name="preferredTeam" value="teamA" required> Панина</label>
-                            </div>
-                            <div class="radio-item">
-                                <label><input type="radio" name="preferredTeam" value="teamB"> Яковлева</label>
-                            </div>
-                        </div>
-                        
-                        <!-- Переход в другую команду -->
-                        <div class="form-group">
-                            <p>Готов ли участник перейти в другую команду, если в выбранной не хватит места?</p>
-                            <div class="radio-item">
-                                <label><input type="radio" name="switchTeam" value="yes" required> Да</label>
-                            </div>
-                            <div class="radio-item">
-                                <label><input type="radio" name="switchTeam" value="no"> Нет</label>
-                            </div>
-                        </div>
-                        
-                        <!-- Возраст -->
-                        <div class="form-group">
-                            <input type="number" id="age" name="age" placeholder="Количество полных лет участника" min="1" max="99" required>
-                        </div>
-                        
-                        <!-- ФИО сопровождающего -->
-                        <div class="form-group">
-                            <input type="text" id="guardianName" name="guardianName" placeholder="ФИО сопровождающего" required>
-                        </div>
-                        
-                        <!-- Номер телефона сопровождающего -->
-                        <div class="form-group">
-                            <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="Номер телефона сопровождающего" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required>
-                        </div>
-                        
-                        <!-- Согласие на обработку данных -->
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="agreement" name="agreement" required>
-                            <label for="agreement">Я согласен на обработку персональных данных</label>
-                        </div>
-                        
-                        <!-- Кнопка отправки -->
-                        <div class="form-group">
-                            <button type="submit" class="submit-button">Отправить заявку</button>
-                        </div>
-                    </form>
-                
-            </section>
-
-            
-        </div>
-
-        <!-- Подвал -->
-        <footer>
+                <h1>Подай заявку на участие</h1>
+                <form action="#" method="post" class="form">
+                    <!-- ФИО -->
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" placeholder="ФИО" required class="inp">
+                    </div>
                     
-            <p>Хотите стать партнером? <a href="#">Напишите нам!</a></p>
-            <p>Для СМИ <a href="mailto:media@uk.ru">media@uk.ru</a></p>
-            <p>VK: <a href="https://vk.com/ural_classics" target="_blank">vk.com/ural_classics</a></p>
-            
-        </footer>
+                    <!-- Ссылка на видео -->
+                    <div class="form-group">
+                        <input type="url" id="videoLink" name="videoLink" placeholder="Ссылка на видео-заявку в ВК для участия" required class="inp">
+                    </div>
+                    
+                    <!-- Амплуа -->
+                    <div class="form-group">
+                        <p>Амплуа:</p>
+                        <div class="radio-item">
+                            <label><input type="radio" name="position" value="goalkeeper" required>Вратарь</label>
+                        </div>
+                        <div class="radio-item">
+                            <label><input type="radio" name="position" value="defender">Защитник</label>
+                        </div>
+                        <div class="radio-item">
+                            <label><input type="radio" name="position" value="forward">Нападающий</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Желаемая команда -->
+                    <div class="form-group">
+                        <p>Желаемая команда:</p>
+                        <div class="radio-item">
+                            <label><input type="radio" name="preferredTeam" value="teamA" required>Панина</label>
+                        </div>
+                        <div class="radio-item">
+                            <label><input type="radio" name="preferredTeam" value="teamB">Яковлева</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Переход в другую команду -->
+                    <div class="form-group">
+                        <p>Готов ли участник перейти в другую
+                            команду, если в выбранной не хватит
+                            места?</p>
+                        <div class="radio-item">
+                            <label><input type="radio" name="switchTeam" value="yes" required>Да</label>
+                        </div>
+                        <div class="radio-item">
+                            <label><input type="radio" name="switchTeam" value="no">Нет</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Возраст -->
+                    <div class="form-group">
+                        <input type="number" id="age" name="age" placeholder="Количество полных лет участника" min="1" max="99" required class="inp">
+                    </div>
+                    
+                    <!-- ФИО сопровождающего -->
+                    <div class="form-group">
+                        <input type="text" id="guardianName" name="guardianName" placeholder="ФИО сопровождающего" required class="inp">
+                    </div>
+                    
+                    <!-- Номер телефона сопровождающего -->
+                    <div class="form-group">
+                        <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="Номер телефона сопровождающего" pattern="\8\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required class="inp">
+                    </div>
+                    
+                    <!-- Согласие на обработку данных -->
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">Я согласен на обработку персональных данных</label>
+                    </div>
+                    
+                    <!-- Кнопка отправки -->
+                    <div class="form-group">
+                        <button type="submit" class="submit-button"><img src="../Assets/send.svg" class="button-img">Отправить заявку</button>
+                    </div>
+                </form>
+            </section>
+            <script src="script.js"></script>
+        </div>
     </div>
+    <footer>
+        <div class="foot1">
+            <p>Хотите стать партнером?
+                - почта ___</p>
+        </div>
+        <div class="foot2">
+            <p>Для СМИ
+                - почта ___</p>
+        </div>
+        <div class="foot3">
+            <p>ТГ проекта <a href="http://t.me/ural_classics">t.me/ural_classics</a>
+            ВК проекта <a href="https://vk.com/ural_classics">vk.com/ural_classics</a></p>
+        </div>
+    </footer>
 </body>
 </html>

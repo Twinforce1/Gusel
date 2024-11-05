@@ -1,138 +1,229 @@
 @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Light.otf') format('otf'),
-         url('fonts/Gilroy-Light.otf') format('otf');
+    src: url('../fonts/gilroy-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/Gilroy-ExtraBold.otf') format('otf'),
-         url('fonts/Gilroy-ExtraBold.otf') format('otf');
-    font-weight: bold;
+    src: url('../fonts/gilroy-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy-bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
 
 body {
-    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
+    font-family: 'Gilroy', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
     background-size: 100%;
     background-image: url(../Assets/Frame\ 88.svg);
     background-position-x: center;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    color: #fff;
 }
-.container2
+
+.inner_container
 {
     width: 100%;
-
-    margin: auto;
-
 }
 
-.container {
-    width: 90%;
-    max-width: 2000px;
-    margin: auto;
-    
-    
+a {
+    text-decoration-line: none;
+    border-radius: 18px;
+    height: 45px;
 }
 
-/* Шапка */
+.main_container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 50px 0px 100px 0px;
+    padding: 0px 180px 0px;
+}
+
 header {
-    margin-left: 10%;
-    margin-top: 5%;    
+    font-size: 25px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: sticky;
+    top: 30px;
+    z-index: 1;
+    transition: backdrop-filter 0.5s ease, background-color 0.5s ease; 
+    background-color: transparent;
+    border-radius: 50px;
+    margin-bottom: 90px;
 }
 
+header.blur {
+    backdrop-filter: blur(7px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(70, 122, 127, 0.7));
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 50px;
+}
+
+header.blur::before {
+    opacity: 1;
+}
 
 nav ul {
-    display: flex;
     list-style: none;
-    font-size: 20px;
+    display: flex;
+    padding-inline-start: 0px;
+    justify-content: center;
 }
 
 nav ul li {
-    display: flex;
+    margin: 0px 150px 0px 0px;
+    align-content: center;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 95px; /* Добавляет отступы между кнопками */
-
 }
 
 nav ul li a {
+    position: relative;
     color: #fff;
     text-decoration: none;
-    font-weight: normal; /* Применяем стандартный вес */
+    text-shadow:
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+    padding-bottom: 4px;
 }
 
-.button {
-    background: linear-gradient(90deg, #42c1c7, #7be8ee); /* Градиент от светло-бирюзового к светло-синему */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #42c1c7;
+    transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul a.text-button-color::after, nav ul a.logo-ref::after {
+    display: none;
+}
+
+.logo-header {
+    width: 114px;
+    margin-left: 45px;
+}
+
+.header-button, .form-group button {
+    background: linear-gradient(90deg, #42c1c7, #7be8ee);
     border: none;
-    padding: 10px 20px;
-    color: #0f1f23;
+    padding: 10px 25px;
     cursor: pointer;
-    border-radius: 25px; /* Закругленные углы */
-    font-family: 'Gilroy', Arial, sans-serif; /* Используем шрифт Gilroy */
-    font-weight: bold; /* Применяем жирный вариант шрифта */
-    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease; /* Плавный переход для фона, цвета текста и тени */
-    
-}
-/* Эффект наведения */
-.button:hover {
-    background: linear-gradient(90deg, #7be8ee, #42c1c7); /* Инверсия градиента при наведении */
-    color: #fff; /* Изменение цвета текста при наведении */
-    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4); /* Тень при наведении */
-    transform: scale(1.05); /* Немного увеличиваем размер кнопки */
+    border-radius: 18px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    height: min-content;
 }
 
-/* Форма */
-.application-form {
-    
-    border-radius: 10px;
-    padding: 30px;
-    width: 600px;
-    margin-top: 60px;
-    margin-left: 300px;
-    
-    position: relative;
+.header-button:hover, .form-group button:hover {
+    background: linear-gradient(90deg, #7be8ee, #42c1c7);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4);
+    transform: scale(1.02);
 }
 
-.container h1 {
+.form-group button {
+    margin-top: 40px;
+}
+
+.header-button {
+    margin-right: 0px;
+}
+
+.text-button-color {
+    color: #0f1f23;
+}
+
+.button-img {
+    margin-right: 10px;
+}
+
+h1 {
+    color: #42c1c7;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
     text-align: left;
-    color: #7be8ee;
+    margin-bottom: 40px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.application-form {
+    position: relative;
+    text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
     color: #ffffff;
-    margin-right: 15px; /* Уменьшает отступ справа для меток */
-    display: inline-flex; /* Размещает радиокнопки и текст в строку */
-    align-items: center; /* Выравнивание по центру */
-
+    display: inline-flex;
+    align-items: center;
 }
+
 .radio-item {
-    margin-top: 15px;
-    margin-bottom: 10px; /* Отступ между радиокнопками */
+    margin-bottom: 15px;
+}
+
+.radio-item label input {
+    margin-right: 15px;
 }
 
 .form-group input,
 .form-group select {
-    margin-right: 10px;
-    width: 60%;
     padding: 10px;
-    border: 1px solid #42c1c7;
-    border-radius: 45px; /* Закругленные углы */
-    background-color: white; /* Белый фон внутри поля */
-    color: #ffffff;
+    border: 2px solid #42c1c7;
+    border-radius: 45px;
+    background-color: white;
+    color: #000;
     font-size: 16px;
+    font-family: 'Gilroy', sans-serif;
+    padding-left: 20px;
+}
+
+.inp {
+    margin-bottom: 20px;
+    width: 25%;
 }
 
 .form-group input::placeholder {
@@ -141,55 +232,53 @@ nav ul li a {
 
 .form-group input[type="checkbox"] {
     width: auto;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .checkbox {
-    margin-top: 40px;
     display: flex;
     align-items: center;
-    
+    width: 300px;
 }
 
 .form-group p {
-    margin: 0 0 5px;
-    color: #7be8ee;
+    margin: 0px 0 15px 0px;
+    color: #42c1c7;
+    font-weight: 700;
+    width: 400px;
 }
 
-button.submit-button {
-    margin-top: 70px;
-    margin-bottom: 10px;
-    width: 30%;
-    padding: 12px;
-    background: linear-gradient(90deg, #42c1c7, #7be8ee);
-    color: #0f1f23;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.5s ease;
-}
-
-button.submit-button:hover {
-    background: linear-gradient(90deg, #7be8ee, #42c1c7);
-}
-
-/* Подвал */
 footer {
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет для затемнения */
-    padding: 20px 0;
     text-align: center;
-    color: #ffffff;
-    bottom: 0; /* Прикрепляет футер к низу */
-    width: 100%; /* Ширина футера на 100% */
+    margin-bottom: 30px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-left: 50px;
 }
 
-footer a {
-    color: #7be8ee;
+.foot1, .foot2, .foot3 {
+    text-align: left;
+    width: 350px;
+    vertical-align: top;
+    white-space: pre-line;
+}
+
+.foot2 {
+    width: 200px;
+}
+
+.foot1 p, .foot2 p, .foot3 p {
+    line-height: 30px;
+}
+
+footer p, footer a {
+    font-weight: 400;
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    margin-top: 0px;
 }
 
 footer a:hover {
-    color: #42c1c7;
+    text-decoration: underline;
 }
