@@ -135,13 +135,13 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     display: none;
 }
 
-.logo {
-    width: 150px;
-}
-
 .logo-header {
     width: 114px;
     margin-left: 45px;
+}
+
+.logo {
+    width: 150px;
 }
 
 .header-button, .main-buttons a, .button-center a, .button-arrow a, .register a, .tabs a, .price-add a {
@@ -208,10 +208,6 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .bag-img {
     padding: 5px;
     margin: 0px;
-}
-
-.price-add a {
-    font-weight: 400;
 }
 
 .price-add a.shopping-bag {
@@ -364,6 +360,10 @@ h1 {
 .photos1-track, .photos2-track {
     gap: 20px;
     height: 257px;
+}
+
+.photos2-track {
+    margin-right: 4px;
 }
 
 .carousel-photo {
