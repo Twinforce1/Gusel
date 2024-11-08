@@ -1,4 +1,3 @@
-// Фон у шапки
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const scrollTop = window.scrollY || document.documentElement.scrollTop;

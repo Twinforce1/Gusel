@@ -29,17 +29,14 @@
 body {
     font-family: 'Gilroy', sans-serif;
     font-size: 22px;
-    font-weight: 400;
     background-size: 100%;
     background-image: url(../Assets/Frame\ 88.svg);
     background-position-x: center;
     margin: 0px;
     color: #fff;
-}
-
-.inner_container
-{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -51,8 +48,20 @@ a {
 .main_container {
     width: 100%;
     max-width: 1440px;
-    margin: 50px 0px 100px 0px;
+    margin: 50px 0px 0px 0px;
     padding: 0px 180px 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header {
@@ -65,7 +74,7 @@ header {
     transition: backdrop-filter 0.5s ease, background-color 0.5s ease; 
     background-color: transparent;
     border-radius: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
 }
 
 header.blur {
@@ -139,6 +148,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .logo-header {
     width: 114px;
     margin-left: 45px;
+    height: 44px;
 }
 
 .name {
