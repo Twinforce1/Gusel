@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Уральская Классика - Атрибутика</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="../Assets/_Контент.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/static/Items/styles.css">
+    <link rel="icon" href="/static/Assets/_Контент.svg" type="image/x-icon">
 </head>
 <body>
     <div class="main_container">
         <header>
             <nav>
                 <ul>
-                    <li><a href="../Main/index.html" class="logo-ref"><img src="../Assets/haha-classic.png" alt="Лого" class="logo-header"></a></li>
-                    <li><a href="../Inspiration/inspiration.html">О проекте</a></li>
-                    <li><a href="../Main/index.html#merch-id">Атрибутика</a></li>
-                    <li><a href="../Hero_uk/hero_uk.html">Герои УК</a></li>
-                    <a href="../Form/form.html" class="text-button-color"><li class="header-button"><img src="../Assets/pen-tool.svg" class="button-img">Заявка на участие</li></a>
+                    <li><a href="/" class="logo-ref"><img src="/static/Assets/haha-classic.png" alt="Лого" class="logo-header"></a></li>
+                    <li><a href="/about">О проекте</a></li>
+                    <li><a href="/#merch-id">Атрибутика</a></li>
+                    <li><a href="/heroes">Герои УК</a></li>
+                    <a href="/apply" class="text-button-color"><li class="header-button"><img src="/static/Assets/pen-tool.svg" class="button-img">Заявка на участие</li></a>
                 </ul>
             </nav>
         </header>
@@ -25,23 +25,23 @@
             <div class="name">
                 <p>Атрибутика</p>
                 <p>/</p>
-                <p>Название товара</p>
+                <p>{{ item.name }}</p>
             </div>
     
             <section class="product">
                 <div class="product-images">
                     <div class="thumbnail-images">
-                        <img src="../Assets/kot1.webp" class="thumbnail tn1 active">
-                        <img src="../Assets/kot2.jpg" class="thumbnail tn2">
-                        <img src="../Assets/kot3.jpg" class="thumbnail tn3">
+                        <img src="{{ item.image }}" class="thumbnail tn1 active">
+                        <img src="/static/Assets/kot2.jpg" class="thumbnail tn2">
+                        <img src="/static/Assets/kot3.jpg" class="thumbnail tn3">
                     </div>
-                    <img src="../Assets/kot1.webp" class="main-image">
+                    <img src="{{ item.image }}" class="main-image">
                 </div>
                 <div class="product-info">
-                    <h2>Название товара</h2>
-                    <p class="price">1200₽</p>
+                    <h2>{{ item.name }}</h2>
+                    <p class="price">{{ item.price}}₽</p>
                     <div class="add-cart-button">
-                        <a href="#" class="text-button-color"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img">Добавить в корзину</a>
+                        <a href="#" class="text-button-color"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img">Добавить в корзину</a>
                     </div>
                 </div>
             </section>
@@ -49,52 +49,21 @@
             <section class="merch-carousel">
                 <h1>Другая атрибутика</h1>
                 <div class="merch-container">
-                    <button class="carousel-btn2 prev-btn2"><img src="../Assets/arrow2.svg" class="carousel-button-img1"></button>
+                    <button class="carousel-btn2 prev-btn2"><img src="/static/Assets/arrow2.svg" class="carousel-button-img1"></button>
                     <div class="merch">
                         <div class="merch-track">
-                            <div class="merch-item">
-                                <img src="../Assets/shirt.webp" alt="Футболка" class="carousel-photo">
-                                <p>Футболка</p>
-                                <div class="price-add">
-                                    <a href="#" class="text-button-color price">2500₽</a>
-                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                            {% for i in items %}
+                                <div class="merch-item">
+                                    <img src="{{ i.image }}" alt="Элемент" class="carousel-photo">
+                                    <p>{{ i.name }}</p>
+                                    <div class="price-add">
+                                        <a href="/item/{{ i.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img"> {{ i.price }} руб.</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="../Assets/cap.jpeg" alt="Кепка" class="carousel-photo">
-                                <p>Кепка</p>
-                                <div class="price-add">
-                                    <a href="#" class="text-button-color price">1000₽</a>
-                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="../Assets/bracelet.webp" alt="Браслет" class="carousel-photo">
-                                <p>Браслет</p>
-                                <div class="price-add">
-                                    <a href="#" class="text-button-color price">500₽</a>
-                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="../Assets/hat.jpg" alt="Шапка" class="carousel-photo">
-                                <p>Шапка</p>
-                                <div class="price-add">
-                                    <a href="#" class="text-button-color price">1500₽</a>
-                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="../Assets/puck.webp" alt="Шайба" class="carousel-photo">
-                                <p>Шайба</p>
-                                <div class="price-add">
-                                    <a href="#" class="text-button-color price">1000₽</a>
-                                    <a href="#" class="shopping-bag"><img src="../Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                    <button class="carousel-btn2 next-btn2"><img src="../Assets/arrow2.svg" class="carousel-button-img2"></button>
+                    <button class="carousel-btn2 next-btn2"><img src="/static/Assets/arrow2.svg" class="carousel-button-img2"></button>
                 </div>
             </section>
         </div>
@@ -114,7 +83,7 @@
             </div>
         </footer>
 
-        <script src="script.js"></script>
+        <script src="/static/Items/script.js"></script>
     </div>
 
 </body>

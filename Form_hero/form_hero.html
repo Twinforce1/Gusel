@@ -24,7 +24,7 @@
         <div class="content">
             <section class="application-form">
                 <h1>Стать героем "Уральской классики"</h1>
-                <form action="/success_story" method="post">
+                <form action="/send_story" method="post" enctype="multipart/form-data">
     
                     <div class="form-group">
                         <input type="text" id="fullName" name="fullName" placeholder="ФИО" class="inp" required>
@@ -43,7 +43,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <input type="file" id="photo" name="photo" placeholder="Прикрепи свою фотографию" class="inp" accept="image/*" required>
+                        <input type="file" id="photo" name="photo" placeholder="Прикрепи свою фотографию" class="inp" accept="image/*">
                     </div>
                     
                     <div class="form-group checkbox">

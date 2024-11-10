@@ -154,47 +154,17 @@
                     <button class="carousel-btn2 prev-btn2"><img src="/static/Assets/arrow2.svg" class="carousel-button-img1"></button>
                     <div class="merch">
                         <div class="merch-track">
-                            <div class="merch-item">
-                                <img src="/static/Assets/shirt.webp" alt="Футболка" class="carousel-photo">
-                                <p>Футболка</p>
-                                <div class="price-add">
-                                    <a href="/static/Items/items.html" class="text-button-color price" id="participants-id">2500₽</a>
-                                    <a href="#" class="shopping-bag"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
+                            {% for item in items %}
+                                <div class="merch-item">
+                                    <img src="{{ item.image }}" alt="Футболка" class="carousel-photo">
+                                    <p>{{ item.name }}</p>
+                                    <div class="price-add">
+                                        <a href="/item/{{ item.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img"> {{ item.price }} руб.</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="/static/Assets/cap.jpeg" alt="Кепка" class="carousel-photo">
-                                <p>Кепка</p>
-                                <div class="price-add">
-                                    <a href="/static/Items/items.html" class="text-button-color price">1000₽</a>
-                                    <a href="#" class="shopping-bag"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="/static/Assets/bracelet.webp" alt="Браслет" class="carousel-photo">
-                                <p>Браслет</p>
-                                <div class="price-add">
-                                    <a href="/static/Items/items.html" class="text-button-color price">500₽</a>
-                                    <a href="#" class="shopping-bag"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="/static/Assets/hat.jpg" alt="Шапка" class="carousel-photo">
-                                <p>Шапка</p>
-                                <div class="price-add">
-                                    <a href="/static/Items/items.html" class="text-button-color price">1500₽</a>
-                                    <a href="#" class="shopping-bag"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
-                            <div class="merch-item">
-                                <img src="/static/Assets/puck.webp" alt="Шайба" class="carousel-photo">
-                                <p>Шайба</p>
-                                <div class="price-add">
-                                    <a href="/static/Items/items.html" class="text-button-color price">1000₽</a>
-                                    <a href="#" class="shopping-bag"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img bag-img"></a>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
+                        
                     </div>
                     <button class="carousel-btn2 next-btn2"><img src="/static/Assets/arrow2.svg" class="carousel-button-img2"></button>
                 </div>

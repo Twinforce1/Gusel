@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Футболка",
+        "price": 2500,
+        "image": "/static/Assets/shirt.webp"
+    },
+    {
+        "id": 2,
+        "name": "Кепка",
+        "price": 1000,
+        "image": "/static/Assets/cap.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Браслет",
+        "price": 500,
+        "image": "/static/Assets/bracelet.webp"
+    },
+    {
+        "id": 4,
+        "name": "Шапка",
+        "price": 1500,
+        "image": "/static/Assets/hat.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Шайба",
+        "price": 1000,
+        "image": "/static/Assets/puck.webp"
+    }
+]
