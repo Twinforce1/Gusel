@@ -207,12 +207,17 @@ h1 {
     display: flex;
     gap: 50px;
     margin-bottom: 80px;
+    height: auto;
+}
+
+.map-link {
+    flex: 0 0 calc(50% - 50px);
+    max-width: calc(50% - 50px);
 }
 
 .map-placeholder {
-    background-color: #fff;
-    width: 695px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     border-radius: 18px;
 }
 
