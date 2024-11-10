@@ -53,8 +53,7 @@ a {
 .main_container {
     width: 100%;
     max-width: 1440px;
-    margin: 50px 0px 0px 0px;
-    padding: 0px 180px 0px;
+    margin: 0px 180px 0px 180px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -214,7 +213,6 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .text-button-color.price {
     flex-grow: 1;
     justify-content: center;
-    margin-right: 10px;
 }
 
 .button-img {
@@ -224,13 +222,6 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .bag-img {
     padding: 5px;
     margin: 0px;
-}
-
-.price-add a.shopping-bag {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .main {
@@ -310,7 +301,7 @@ h1 {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 450px;
+    height: auto;
     border-radius: 18px;
 }
 
@@ -322,7 +313,7 @@ h1 {
     display: flex;
     overflow: hidden;
     border-radius: 18px;
-    height: 450px;
+    height: auto;
     vertical-align: bottom;
     width: 100%;
 }
@@ -330,18 +321,20 @@ h1 {
 .merch-item, .yakovlev-item, .panin-item {
     text-align: left;
     border-radius: 18px;
-    height: 450px;
-    width: 345px;
+    height: auto;
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
     display: flex;
     flex-direction: column;
     vertical-align: bottom;
+    position: relative;
 }
 
 .merch-item p {
     margin: 5px 0px 5px 0px;
     font-weight: 400;
     color: #fff;
-    min-width: 345px;
+    min-width: auto;
 }
 
 .yakovlev-item p, .panin-item p {
@@ -370,7 +363,7 @@ h1 {
 
 .merch-track, .yakovlev-track, .panin-track {
     gap: 0px 20px;
-    height: 450px;
+    height: auto;
 }
 
 .photos1-track, .photos2-track {
@@ -384,10 +377,11 @@ h1 {
 
 .carousel-photo {
     width: 100%;
-    height: 345px;
+    height: auto;
     border-radius: 18px;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 1 / 1;
 }
 
 .carousel2-photo {
@@ -401,8 +395,7 @@ h1 {
 .price-add {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    width: 99%;
 }
 
 .heroes p {
@@ -436,6 +429,10 @@ h1 {
 .hero-track, .merch-track, .yakovlev-track, .panin-track, .photos1-track, .photos2-track {
     display: flex;
     transition: transform 0.8s ease-in-out;
+}
+
+.merch-track {
+    width: calc(100 * 5);
 }
 
 .hero-item {
@@ -510,12 +507,10 @@ h1 {
 }
 
 .prev-btn, .prev-btn2, .prev-btn3, .prev-btn4 {
-    margin-left: -60px;
     margin-right: 16px;
 }
 
 .next-btn, .next-btn2, .next-btn3, .next-btn4 {
-    margin-right: -60px;
     margin-left: 16px;
 }
 .participants {
