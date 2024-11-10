@@ -53,8 +53,7 @@ a {
 .main_container {
     width: 100%;
     max-width: 1440px;
-    margin: 50px 0px 0px 0px;
-    padding: 0px 180px 0px;
+    margin: 50px 180px 0px 180px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -214,7 +213,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .text-button-color.price {
     flex-grow: 1;
     justify-content: center;
-    margin-right: 10px;
+    margin-bottom: 15px;
 }
 
 .button-img {
@@ -224,13 +223,6 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .bag-img {
     padding: 5px;
     margin: 0px;
-}
-
-.price-add a.shopping-bag {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .main {
@@ -310,7 +302,7 @@ h1 {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 450px;
+    height: auto;
     border-radius: 18px;
 }
 
@@ -322,7 +314,7 @@ h1 {
     display: flex;
     overflow: hidden;
     border-radius: 18px;
-    height: 450px;
+    height: auto;
     vertical-align: bottom;
     width: 100%;
 }
@@ -330,35 +322,38 @@ h1 {
 .merch-item, .yakovlev-item, .panin-item {
     text-align: left;
     border-radius: 18px;
-    height: 450px;
-    width: 345px;
+    height: auto;
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
     display: flex;
     flex-direction: column;
     vertical-align: bottom;
+    position: relative;
 }
 
 .merch-item p {
     margin: 5px 0px 5px 0px;
     font-weight: 400;
     color: #fff;
-    min-width: 345px;
+    min-width: auto;
 }
 
 .yakovlev-item p, .panin-item p {
     font-weight: 400;
     color: #fff;
-    min-width: 345px;
+    min-width: auto;
     margin: 0px;
     overflow-y: auto;
     flex-grow: 1;
-    max-height: 50px;
+    max-height: 12%;
+    line-height: 30px;
 }
 
 .yakovlev-item h2, .panin-item h2 {
     margin: 5px 0px 5px 0px;
     font-weight: 400;
     color: #42c1c7;
-    min-width: 345px;
+    min-width: auto;
     font-size: 22px;
 }
 
@@ -370,7 +365,7 @@ h1 {
 
 .merch-track, .yakovlev-track, .panin-track {
     gap: 0px 20px;
-    height: 450px;
+    height: auto;
 }
 
 .photos1-track, .photos2-track {
@@ -384,10 +379,11 @@ h1 {
 
 .carousel-photo {
     width: 100%;
-    height: 345px;
+    height: auto;
     border-radius: 18px;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 1 / 1;
 }
 
 .carousel2-photo {
@@ -401,8 +397,8 @@ h1 {
 .price-add {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    align-self: center;
 }
 
 .heroes p {
@@ -416,8 +412,7 @@ h1 {
     position: relative;
     width: 100%;
     margin: 35px 0px;
-    height: 300px;
-    background-color: #fff;
+    height: auto;
     border-radius: 18px;
 }
 
@@ -425,6 +420,7 @@ h1 {
     display: flex;
     overflow: hidden;
     border-radius: 18px;
+    width: 100%;
 }
 
 .photo-carousel {
@@ -438,29 +434,38 @@ h1 {
     transition: transform 0.8s ease-in-out;
 }
 
+.hero-track {
+    width: 100%;
+}
+
 .hero-item {
+    flex: 0 0 100%;
+    max-width: 100%;
     text-align: center;
     display: flex;
-    height: 300px;
-    width: 1440px;
     border-radius: 18px;
     overflow: hidden;
+    background-color: #fff;
 }
 
 .img-container {
-    width: 300px;
-    height: 300px;
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
 }
 
 .img-carousel {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 18px 0px 0px 18px;
     object-position: center;
 }
 
 .card-inside {
+    flex: 1;
     color: #000;
     overflow-wrap: break-word;
     display: flex;
@@ -510,12 +515,10 @@ h1 {
 }
 
 .prev-btn, .prev-btn2, .prev-btn3, .prev-btn4 {
-    margin-left: -60px;
     margin-right: 16px;
 }
 
 .next-btn, .next-btn2, .next-btn3, .next-btn4 {
-    margin-right: -60px;
     margin-left: 16px;
 }
 .participants {
