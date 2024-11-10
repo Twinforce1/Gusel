@@ -26,12 +26,17 @@
     font-style: normal;
 }
 
+html {
+    background-color: #000;
+    z-index: -2;
+}
+
 body {
     font-family: 'Gilroy', sans-serif;
     font-size: 22px;
-    background-size: 100%;
     background-image: url(../Assets/Frame\ 88.svg);
-    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0px;
     color: #fff;
     display: flex;
@@ -48,8 +53,7 @@ a {
 .main_container {
     width: 100%;
     max-width: 1440px;
-    margin: 50px 0px 0px 0px;
-    padding: 0px 180px 0px;
+    margin: 50px 180px 0px 180px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -273,7 +277,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .text-button-color.price {
     flex-grow: 1;
     justify-content: center;
-    margin-right: 10px;
+    margin-bottom: 15px;
 }
 
 .button-img {
@@ -283,13 +287,6 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .bag-img {
     padding: 5px;
     margin: 0px;
-}
-
-.price-add a.shopping-bag {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .merch-carousel {
@@ -313,7 +310,7 @@ h1 {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 450px;
+    height: auto;
     border-radius: 18px;
 }
 
@@ -321,7 +318,7 @@ h1 {
     display: flex;
     overflow: hidden;
     border-radius: 18px;
-    height: 450px;
+    height: auto;
     vertical-align: bottom;
     width: 100%;
 }
@@ -329,37 +326,41 @@ h1 {
 .merch-item {
     text-align: left;
     border-radius: 18px;
-    height: 450px;
-    width: 345px;
+    height: auto;
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
     display: flex;
     flex-direction: column;
     vertical-align: bottom;
+    position: relative;
 }
 
 .merch-item p {
     margin: 5px 0px 5px 0px;
+    font-weight: 400;
     color: #fff;
-    min-width: 345px;
+    min-width: auto;
 }
 
 .merch-track {
     gap: 0px 20px;
-    height: 450px;
+    height: auto;
 }
 
 .carousel-photo {
     width: 100%;
-    height: 345px;
+    height: auto;
     border-radius: 18px;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 1 / 1;
 }
 
 .price-add {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    width: 99%;
+    align-self: center;
 }
 
 .add-cart-button {
@@ -402,12 +403,10 @@ h1 {
 }
 
 .prev-btn2 {
-    margin-left: -60px;
     margin-right: 16px;
 }
 
 .next-btn2 {
-    margin-right: -60px;
     margin-left: 16px;
 }
 
