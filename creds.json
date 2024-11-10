@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dev-copilot-441319-b8",
+  "private_key_id": "024350c790dfb8470f9a781158db747e48716262",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDdZWRCoVv7XXVi\nXpOJfkfeBO7e3pKyjJMqQKFMSnIvTmZ/AYZNVsyh+ZJyfSRbz5qhEevlt7FxI7iS\nEEGFHWovQZFeCuuvRW1WPlOYi1Ml2czD+zJs7mlr1ejw2XQsPkulgLHj/q4QYd4s\nfWLlZk397LawM06lfxAnuMwlW/TYNTIg+EztKIoRysN30FRnBXSmUWULP6fFsEPn\nCOXd5AHLFbullGV0vHB4fg7eLLvKUX6GbfoIFhmii+t8K6f4vY7kxPvB7mqoqmQD\nmNrsiKS85Sq+sPzdmHaRpZ0isBYtVcmL0ARaN5uBfktfIK9Q64Vq3eSmpbg2wzhp\nixhyKETHAgMBAAECggEAHdIn6I+qf5etlYPutIDldkLM2Ak70j/8HJ9a+pc2fSe+\nx5GxgN5VruWac8BmctVqWxK6ZxVQmdA5brcw1BjLsjTPO08WQuQDn6/Ce9QcbYdC\nPQ2rU5/jZEqKV1K7ArCbaN4GWBL4aC1+ixiShxq6G59UVjR6/fC5ANiz6r5RowN7\nAfwmk0oFbhlI20YWAcixgUbI4o94FZchLpUIuIeMjy+z0lPIrbq9AuKM6ZxzkmL/\n1No3yadk/RvMQjlCS6fddcAJcMwr9tiefaEL42nw4Rv8pJWoWc8GkIVjFC5W7zrz\ncr+oFst4nFg/dkExGqGjgdQfPC6MMkpz9BF8SNJEiQKBgQD/vwIkpmi/pnk1S1Mq\n6Xa496HrxXba8bVLRxkxQ5ALrhXK27U4vk9WwTqktAAdbllkBl3ATRahlIlZ9Tuo\ndcfFErB1qqdGqpy48EnS5GwAO20DRn0RZNGYmIiTgDqksMkhoSKZ9kdt/1CoROi5\nS1ORJKGIuyyvth/dMc8Y3l6liQKBgQDdnadvLw2bSk9d/PWIuy1mWZNh2/7d773u\npHuuWffw3zUCyEnHjymF1wCamuNJO85HXjRBGaoAQSTK6wRXWxvrnfszdZzQeJd3\nxEgoZav3zr6Wq0cxP1hon0Home9fJE4Nux0oi/E9MEGukmuZoc+hdwodPcvgRO/L\nQnsSLA1TzwKBgQCFBqyttaVcstHvR7v94Sww8BXYVoEJR5qeil/vQQ5nFOke+INd\n/Ze1L5M6YqqApIp4vdr8EN0JtQJwuV+Ls5/ywVLqEZcq6cnVZJ9xxADtafu9LWgW\nqRNgxU6dMqDOU2p7RJ6D6Rekfp5MuHM5FpZkM+KWBY4r45bVbngjnl8qyQKBgAPA\n5dMWQu68ZXe8DxSPxwcSwVJI/ZoYs2jVVFrxnydvQGCZr9Y3cIaZy6LSuMLGxomi\n6NOpcZ2rfMoLDPnFy0VEWbrXZR6KzFX09xvoDO+XitbWc9A7uG2dNOqRoOJFpSTK\nZIYJSL62kIY6aKQjf3bGo183arqTsFQK/jailF81AoGBAKJGUi7HOSIEQxgUaXWb\n62w5b55mx8yD6QdmdTU0DcKtUhqLXhfy/tDjOnLyJPw6bfphMUGpSgaNLSsJbO6a\n5wHPbUoTJBz8GfxQelmmgzYl0DRnhZB4NaH9V8hRRpoeGIyNyjdiDiyw4wWG6J6k\nC9QrWSBkJRCCrzO+P2EFtNrr\n-----END PRIVATE KEY-----\n",
+  "client_email": "adminuk@dev-copilot-441319-b8.iam.gserviceaccount.com",
+  "client_id": "110959111852495377011",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/adminuk%40dev-copilot-441319-b8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

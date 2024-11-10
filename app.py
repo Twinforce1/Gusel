@@ -7,6 +7,7 @@ from pathlib import Path
 import json
 import shutil
 import uuid
+from spreadsheet import addToGoogleSheet
 
 app = FastAPI()
 
@@ -71,6 +72,7 @@ async def post_register(request: Request,
                         guardianPhone: str = Form(...),
                         agreement: bool = Form(...)):
 
+    addToGoogleSheet('Sheet1', [fullName, videoLink, position, preferredTeam, switchTeam, age, guardianName, guardianPhone, agreement])
     return RedirectResponse(url="/success_register", status_code=303)
 
 @app.get("/success_register", response_class=HTMLResponse)
@@ -79,6 +81,7 @@ async def read_success_register(request: Request):
 
 @app.post("/send_story", response_class=HTMLResponse)
 async def post_story(request: Request,
+                     fullName: str = Form(...),
                      birthday: str = Form(...),
                      phone_number: str = Form(...),
                      story: str = Form(...),
@@ -91,6 +94,7 @@ async def post_story(request: Request,
     # Сохраняем файл на сервере
     with open(photo_path, "wb") as f:
         shutil.copyfileobj(photo.file, f)
+    addToGoogleSheet('Sheet2', [fullName, birthday, phone_number, story, str(photo_path)])
     return RedirectResponse(url="/story_success", status_code=303)
 
 @app.get("/story_success", response_class=HTMLResponse)
