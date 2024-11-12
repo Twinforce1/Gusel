@@ -150,7 +150,7 @@ prevButton4.addEventListener('click', () => {
 //Автоматические карусели
 
 const intervalTime = 4000;
-const photoWidth = 257;
+const photoWidth = 277;
 
 const photos1Track = document.querySelector('.photos1-track');
 const photos2Track = document.querySelector('.photos2-track');

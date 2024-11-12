@@ -432,7 +432,10 @@ h1 {
 
 .hero-track, .merch-track, .yakovlev-track, .panin-track, .photos1-track, .photos2-track {
     display: flex;
-    transition: transform 0.8s ease-in-out;
+}
+
+.hero-track, .merch-track, .yakovlev-track, .panin-track {
+    transition: transform 0.8s ease;
 }
 
 .hero-track {
