@@ -244,10 +244,6 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     width: 815px;
 }
 
-.photos2-track {
-    flex-direction: row-reverse;
-}
-
 .welcome {
     text-align: right;
     vertical-align: bottom;
@@ -358,8 +354,8 @@ h1 {
 }
 
 .photo-item {
-    width: 100%;
     height: 100%;
+    width: 100%;
     border-radius: 18px;
 }
 
@@ -372,10 +368,13 @@ h1 {
     gap: 20px;
     height: 257px;
     will-change: transform;
+    backface-visibility: hidden;
+    opacity: 1;
 }
 
 .photos2-track {
     margin-right: 4px;
+    flex-direction: row-reverse;
 }
 
 .carousel-photo {
@@ -443,7 +442,7 @@ h1 {
 }
 
 .hero-item {
-    flex: 0 0 100%;
+    flex: 0 0 auto;
     width: 100%;
     text-align: center;
     display: flex;

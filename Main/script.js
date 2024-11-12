@@ -148,7 +148,7 @@ prevButton4.addEventListener('click', () => {
 });
 
 //Автоматические карусели
-const intervalTime = 4000;
+const intervalTime = 6000;
 
 const photos1Track = document.querySelector('.photos1-track');
 const photos2Track = document.querySelector('.photos2-track');
@@ -173,3 +173,14 @@ function startCarousel() {
 }
 
 setInterval(startCarousel, intervalTime);
+
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+sections.forEach((section) => observer.observe(section));

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.15">
+    <meta name="viewport" content="width=1440px, initial-scale=0.15">
     <title>Уральская Классика</title>
     <link rel="stylesheet" href="/static/Main/styles.css">
     <link rel="icon" href="/static/Assets/logo-uk.png" type="image/x-icon">
@@ -107,21 +107,21 @@
                     <div class="hero-carousel">
                         <div class="hero-track">
                             <div class="hero-item">
-                                <div class="img-container"><img src="/static/Assets/hockey1.jpg" alt="Фото" class="img-carousel"></div>
+                                <div class="img-container"><img src="/static/Assets/hockey1.jpg" alt="Фото" class="img-carousel" loading="lazy"></div>
                                 <div class="card-inside">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                                     <h1>Имя Фамилия</h1>
                                 </div>
                             </div>
                             <div class="hero-item">
-                                <div class="img-container"><img src="/static/Assets/hockey2.jpg" alt="Фото" class="img-carousel"></div>
+                                <div class="img-container"><img src="/static/Assets/hockey2.jpg" alt="Фото" class="img-carousel" loading="lazy"></div>
                                 <div class="card-inside">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <h1>Имя Фамилия</h1>
                                 </div>
                             </div>
                             <div class="hero-item">
-                                <div class="img-container"><img src="/static/Assets/hockey3.jpg" alt="Фото" class="img-carousel"></div>
+                                <div class="img-container"><img src="/static/Assets/hockey3.jpg" alt="Фото" class="img-carousel" loading="lazy"></div>
                                 <div class="card-inside">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <h1>Имя Фамилия</h1>
@@ -156,7 +156,7 @@
                         <div class="merch-track">
                             {% for item in items %}
                                 <div class="merch-item">
-                                    <img src="{{ item.image }}" alt="Футболка" class="carousel-photo">
+                                    <img src="{{ item.image }}" alt="Футболка" class="carousel-photo" loading="lazy">
                                     <p>{{ item.name }}</p>
                                     <div class="price-add">
                                         <a href="/item/{{ item.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/shopping-bag.svg" class="button-img"> {{ item.price }} руб.</a>
@@ -185,27 +185,27 @@
                     <div class="carousel">
                         <div class="yakovlev-track">
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot1.webp" alt="Алексей Никитин" class="carousel-photo">
+                                <img src="/static/Assets/kot1.webp" alt="Алексей Никитин" class="carousel-photo" loading="lazy">
                                 <h2>Алексей Никитин</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot2.jpg" alt="Михаил Волков" class="carousel-photo">
+                                <img src="/static/Assets/kot2.jpg" alt="Михаил Волков" class="carousel-photo" loading="lazy">
                                 <h2>Михаил Волков</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot3.jpg" alt="Сергей Морозов" class="carousel-photo">
+                                <img src="/static/Assets/kot3.jpg" alt="Сергей Морозов" class="carousel-photo" loading="lazy">
                                 <h2>Сергей Морозов</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot4.jpg" alt="Владимир Соколов" class="carousel-photo">
+                                <img src="/static/Assets/kot4.jpg" alt="Владимир Соколов" class="carousel-photo" loading="lazy">
                                 <h2>Владимир Соколов</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot5.jpeg" alt="Иван Иванов" class="carousel-photo">
+                                <img src="/static/Assets/kot5.jpeg" alt="Иван Иванов" class="carousel-photo" loading="lazy">
                                 <h2>Иван Иванов</h2>
                                 <p>Описание</p>
                             </div>
@@ -220,27 +220,27 @@
                     <div class="carousel">
                         <div class="panin-track">
                             <div class="panin-item">
-                                <img src="/static/Assets/pes1.jpg" alt="Павел Романов" class="carousel-photo">
+                                <img src="/static/Assets/pes1.jpg" alt="Павел Романов" class="carousel-photo" loading="lazy">
                                 <h2>Павел Романов</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes2.jpg" alt="Андрей Зуев" class="carousel-photo">
+                                <img src="/static/Assets/pes2.jpg" alt="Андрей Зуев" class="carousel-photo" loading="lazy">
                                 <h2>Андрей Зуев</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes3.jpg" alt="Игорь Лебедев" class="carousel-photo">
+                                <img src="/static/Assets/pes3.jpg" alt="Игорь Лебедев" class="carousel-photo" loading="lazy">
                                 <h2>Игорь Лебедев</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes4.webp" alt="Артём Киселёв" class="carousel-photo">
+                                <img src="/static/Assets/pes4.webp" alt="Артём Киселёв" class="carousel-photo" loading="lazy">
                                 <h2>Артём Киселёв</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes5.jpg" alt="Виталий Лукащук" class="carousel-photo">
+                                <img src="/static/Assets/pes5.jpg" alt="Виталий Лукащук" class="carousel-photo" loading="lazy">
                                 <h2>Виталий Лукащук</h2>
                                 <p>Описание</p>
                             </div>
@@ -265,8 +265,8 @@
             </div>
         </footer>
 
-        <script src="/static/common.js"></script>
-        <script src="/static/Main/script.js"></script>
+        <script src="/static/common.js" defer></script>
+        <script src="/static/Main/script.js" defer></script>
     </div>
 </body>
 </html>
