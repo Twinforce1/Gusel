@@ -240,7 +240,8 @@ h1 {
 }
 
 .form-group input::placeholder {
-    color: #000000;
+    color: gray;
+    opacity: 0.5;
 }
 
 .form-group input[type="checkbox"] {
