@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.15">
     <title>Уральская Классика - Атрибутика</title>
     <link rel="stylesheet" href="/static/Items/styles.css">
-    <link rel="icon" href="/static/Assets/_Контент.svg" type="image/x-icon">
+    <link rel="icon" href="/static/Assets/logo-uk.png" type="image/x-icon">
 </head>
 <body>
     <div class="main_container">
@@ -54,7 +54,7 @@
                         <div class="merch-track">
                             {% for i in items %}
                                 <div class="merch-item">
-                                    <img src="{{ i.image }}" alt="Элемент" class="carousel-photo">
+                                    <img src="{{ i.image }}" alt="Элемент" class="carousel-photo" loading="lazy">
                                     <p>{{ i.name }}</p>
                                     <div class="price-add">
                                         <a href="/item/{{ i.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/shopping-bag.svg" alt="Корзина" class="button-img"> {{ i.price }} руб.</a>
@@ -83,8 +83,8 @@
             </div>
         </footer>
 
-        <script src="/static/common.js"></script>
-        <script src="/static/Items/script.js"></script>
+        <script src="/static/common.js" defer></script>
+        <script src="/static/Items/script.js" defer></script>
     </div>
 
 </body>

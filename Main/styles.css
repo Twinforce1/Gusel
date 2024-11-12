@@ -435,7 +435,7 @@ h1 {
 
 .hero-track {
     width: 100%;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 1.2s ease-in-out;
 }
 
 .hero-item {
