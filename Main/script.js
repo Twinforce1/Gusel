@@ -40,7 +40,7 @@ const itemWidth2 = items2[0].offsetWidth + 20;
 let currentPosition2 = 0;
 
 function moveCarousel(position, transition = true) {
-    merchTrack.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
+    merchTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
     merchTrack.style.transform = `translateX(${position}px)`;
 }
 
@@ -79,7 +79,7 @@ const itemWidth3 = items3[0].offsetWidth + 20;
 let currentPosition3 = 0;
 
 function moveCarousel2(position, transition = true) {
-    yaTrack.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
+    yaTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
     yaTrack.style.transform = `translateX(${position}px)`;
 }
 
@@ -119,7 +119,7 @@ const itemWidth4 = items4[0].offsetWidth + 20;
 let currentPosition4 = 0;
 
 function moveCarousel3(position, transition = true) {
-    paninTrack.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
+    paninTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
     paninTrack.style.transform = `translateX(${position}px)`;
 }
 
