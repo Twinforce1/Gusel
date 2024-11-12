@@ -371,6 +371,7 @@ h1 {
 .photos1-track, .photos2-track {
     gap: 20px;
     height: 257px;
+    will-change: transform;
 }
 
 .photos2-track {

@@ -9,8 +9,8 @@ const itemWidth2 = items2[0].offsetWidth + 20;
 let currentPosition2 = 0;
 
 function moveCarousel(position, transition = true) {
-    merchTrack.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
-    merchTrack.style.transform = `translateX(${position}px)`;
+    merchTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
+    merchTrack.style.transform = `translate3D(${position}px, 0, 0)`;
 }
 
 nextButton2.addEventListener('click', () => {
@@ -34,19 +34,6 @@ prevButton2.addEventListener('click', () => {
         setTimeout(() => {
             moveCarousel(currentPosition2);
         }, 300);
-    }
-});
-
-// Фон у шапки
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const threshold = 70;
-
-    if (scrollTop > threshold) {
-        header.classList.add('blur');
-    } else {
-        header.classList.remove('blur');
     }
 });
 
