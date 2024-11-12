@@ -148,39 +148,32 @@ prevButton4.addEventListener('click', () => {
 });
 
 //Автоматические карусели
-
 const intervalTime = 4000;
-const photoWidth = 277;
 
 const photos1Track = document.querySelector('.photos1-track');
 const photos2Track = document.querySelector('.photos2-track');
 
-function scrollLeft() {
-    photos1Track.style.transition = 'transform 1.5s ease';
-    photos1Track.style.transform = `translate3D(-${photoWidth}px, 0, 0)`;
+function scroll(track, direction) {
+    const photoWidth = track.firstElementChild.offsetWidth;
+    const offset = direction === 'left' ? -photoWidth - 20 : photoWidth + 20;
+
+    track.style.transition = 'transform 1.5s ease';
+    track.style.transform = `translate3D(${offset}px, 0, 0)`;
 
     setTimeout(() => {
-        photos1Track.appendChild(photos1Track.firstElementChild);
-        photos1Track.style.transition = 'none';
-        photos1Track.style.transform = 'translate3D(0, 0, 0)';
-    }, 2000);
-}
-
-function scrollRight() {
-    photos2Track.style.transition = 'transform 1.5s ease';
-    photos2Track.style.transform = `translate3D(${photoWidth}px, 0, 0)`;
-
-    setTimeout(() => {
-        photos2Track.appendChild(photos2Track.firstElementChild);
-        photos2Track.style.transition = 'none';
-        photos2Track.style.transform = 'translate3D(0, 0, 0)';
-    }, 2000);
+        if (direction === 'left') {
+            track.appendChild(track.firstElementChild);
+        } else {
+            track.insertBefore(track.lastElementChild, track.firstElementChild);
+        }
+        track.style.transition = 'none';
+        track.style.transform = 'translate3D(0, 0, 0)';
+    }, 1500);
 }
 
 function startCarousel() {
-    scrollLeft();
-    scrollRight();
-    setTimeout(startCarousel, intervalTime);
+    scroll(photos1Track, 'left');
+    scroll(photos2Track, 'right');
 }
 
-startCarousel();
+setInterval(startCarousel, intervalTime);
