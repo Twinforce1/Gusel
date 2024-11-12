@@ -161,11 +161,7 @@ function scroll(track, direction) {
     track.style.transform = `translate3D(${offset}px, 0, 0)`;
 
     setTimeout(() => {
-        if (direction === 'left') {
-            track.appendChild(track.firstElementChild);
-        } else {
-            track.insertBefore(track.lastElementChild, track.firstElementChild);
-        }
+        track.appendChild(track.firstElementChild);
         track.style.transition = 'none';
         track.style.transform = 'translate3D(0, 0, 0)';
     }, 1500);
