@@ -163,7 +163,7 @@ function scrollLeft() {
         photos1Track.appendChild(photos1Track.firstElementChild);
         photos1Track.style.transition = 'none';
         photos1Track.style.transform = 'translate3D(0, 0, 0)';
-    }, 1000);
+    }, 2000);
 }
 
 function scrollRight() {
@@ -174,7 +174,7 @@ function scrollRight() {
         photos2Track.appendChild(photos2Track.firstElementChild);
         photos2Track.style.transition = 'none';
         photos2Track.style.transform = 'translate3D(0, 0, 0)';
-    }, 1000);
+    }, 2000);
 }
 
 function startCarousel() {
