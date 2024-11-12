@@ -444,7 +444,7 @@ h1 {
 
 .hero-item {
     flex: 0 0 100%;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
     display: flex;
     border-radius: 18px;
