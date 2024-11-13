@@ -155,7 +155,7 @@ const photos2Track = document.querySelector('.photos2-track');
 
 function scroll(track, direction) {
     const photoWidth = track.firstElementChild.offsetWidth;
-    const offset = direction === 'left' ? -photoWidth - 20 : photoWidth + 20;
+    const offset = direction === 'left' ? -photoWidth - 16 : photoWidth + 16;
 
     track.style.transition = 'transform 1.5s ease';
     track.style.transform = `translate3D(${offset}px, 0, 0)`;
