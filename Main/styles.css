@@ -33,7 +33,7 @@ html {
 
 body {
     font-family: 'Gilroy', sans-serif;
-    font-size: 22px;
+    font-size: 1.2rem;
     background-image: url(../Assets/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
