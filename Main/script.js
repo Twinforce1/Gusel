@@ -1,33 +1,33 @@
 // Герои
-const track = document.querySelector('.hero-track');
-const prevButton = document.querySelector('.prev-btn');
-const nextButton = document.querySelector('.next-btn');
-const items = Array.from(track.children);
+// const track = document.querySelector('.hero-track');
+// const prevButton = document.querySelector('.prev-btn');
+// const nextButton = document.querySelector('.next-btn');
+// const items = Array.from(track.children);
 
-const itemWidth = items[0].getBoundingClientRect().width;
-let currentPosition = 0;
+// const itemWidth = items[0].getBoundingClientRect().width;
+// let currentPosition = 0;
 
-function moveToSlide(index) {
-    const amountToMove = -itemWidth * index;
-    track.style.transform = `translateX(${amountToMove}px)`;
-    currentPosition = index;
-}
+// function moveToSlide(index) {
+//     const amountToMove = -itemWidth * index;
+//     track.style.transform = `translateX(${amountToMove}px)`;
+//     currentPosition = index;
+// }
 
-prevButton.addEventListener('click', () => {
-    if (currentPosition > 0) {
-        moveToSlide(currentPosition - 1);
-    } else {
-        moveToSlide(items.length - 1)
-    }
-});
+// prevButton.addEventListener('click', () => {
+//     if (currentPosition > 0) {
+//         moveToSlide(currentPosition - 1);
+//     } else {
+//         moveToSlide(items.length - 1)
+//     }
+// });
 
-nextButton.addEventListener('click', () => {
-    if (currentPosition < items.length - 1) {
-        moveToSlide(currentPosition + 1);
-    } else {
-        moveToSlide(0);
-    }
-});
+// nextButton.addEventListener('click', () => {
+//     if (currentPosition < items.length - 1) {
+//         moveToSlide(currentPosition + 1);
+//     } else {
+//         moveToSlide(0);
+//     }
+// });
 
 // Атрибутика
 const merchTrack = document.querySelector('.merch-track');
