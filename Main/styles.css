@@ -587,9 +587,19 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1600px) {
     html {
         font-size: 17px;
+    }
+
+    nav ul li {
+        margin: 0px 7.5rem 0px 0px;
+    }
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 16px;
     }
 
     nav ul li {
@@ -600,7 +610,7 @@ footer a:hover {
 @media (max-width: 1200px) {
 
     html {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .nav-text {
@@ -635,10 +645,6 @@ footer a:hover {
 
     .logo-header {
         display: none;
-    }
-
-    nav ul li {
-        /* margin: 0px rem 0px 0px; */
     }
 
     .photo-carousel {
