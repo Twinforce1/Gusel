@@ -29,7 +29,7 @@
 html {
     background-color: #000;
     z-index: -2;
-    font-size: 18px;
+    font-size: 1vw;
 }
 
 body {
@@ -72,7 +72,6 @@ a {
 header {
     font-size: 1.2rem;
     display: flex;
-    /* flex-wrap: nowrap; */
     position: sticky;
     top: 1.7rem;
     z-index: 1;
@@ -248,10 +247,10 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 }
 
 .text-with-buttons {
-    align-content: start;
-    margin: 4rem 0px 0px 4.22rem;
+    align-content: center;
+    margin: 0px 0px 0px 4.22rem;
     text-align: right;
-    width: 34.5rem;
+    width: 45rem;
 }
 
 .welcome {
@@ -589,28 +588,28 @@ footer a:hover {
 
 @media (max-width: 1740px) {
     html {
-        font-size: 17px;
+        font-size: 0.9rem;
     }
 
     nav ul li {
-        margin: 0px 7.5rem 0px 0px;
+        margin: 0px 8.5rem 0px 0px;
     }
 }
 
 @media (max-width: 1440px) {
     html {
-        font-size: 16px;
+        font-size: 0.8rem;
     }
 
     nav ul li {
-        margin: 0px 6rem 0px 0px;
+        margin: 0px 8rem 0px 0px;
     }
 }
 
 @media (max-width: 1200px) {
 
     html {
-        font-size: 15px;
+        font-size: 0.7rem;
     }
 
     .nav-text {
@@ -624,7 +623,7 @@ footer a:hover {
     }
     
     nav ul li {
-        margin: 0px 9rem 0px 0px;
+        margin: 0px 14rem 0px 0px;
     }
 
     .button-img {
@@ -636,11 +635,7 @@ footer a:hover {
 @media (max-width: 1030px) {
 
     html {
-        font-size: 14px;
-    }
-
-    .nav-icon {
-        width: 3rem;
+        font-size: 0.6rem;
     }
 
     .logo-header {
@@ -650,14 +645,19 @@ footer a:hover {
     .photo-carousel {
         display: none;
     }
+
+    nav ul li {
+        margin: 0px 15rem 0px 0px;
+    }
+
 }
 
 @media (max-width: 900px) {
     html {
-        font-size: 12px;
+        font-size: 0.5rem;
     }
 
     nav ul li {
-        margin: 0px 9.5rem 0px 0px;
+        margin: 0px 13rem 0px 0px;
     }
 }
