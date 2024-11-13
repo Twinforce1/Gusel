@@ -29,11 +29,12 @@
 html {
     background-color: #000;
     z-index: -2;
+    font-size: 1vw;
 }
 
 body {
     font-family: 'Gilroy', sans-serif;
-    font-size: 22px;
+    font-size: 1rem;
     background-image: url(../Assets/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,13 +48,13 @@ body {
 a {
     text-decoration-line: none;
     border-radius: 18px;
-    height: 45px;
+    height: 2.5rem;
 }
 
 .main_container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 50px 180px 0px 180px;
+    width: 80vw;
+    max-width: 80rem;
+    margin: 2.8rem 10rem 0rem 10rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -62,22 +63,22 @@ a {
 
 .content {
     flex: 1;
-    margin-bottom: 100px;
+    margin-bottom: 5.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 header {
-    font-size: 25px;
+    font-size: 1.2rem;
     display: flex;
-    flex-wrap: nowrap;
     position: sticky;
-    top: 30px;
+    top: 1.7rem;
     z-index: 1;
     transition: backdrop-filter 0.5s ease, background-color 0.5s ease; 
     background-color: transparent;
     border-radius: 50px;
+    margin-bottom: 2.2rem;
 }
 
 header.blur {
@@ -104,6 +105,14 @@ header.blur::before {
     opacity: 1;
 }
 
+.nav-icon {
+    display: none;
+}
+
+.nav-text.header {
+    text-shadow: none;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -112,7 +121,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0px 150px 0px 0px;
+    margin: 0px 9rem 0px 0px;
     align-content: center;
     align-items: center;
 }
@@ -126,7 +135,7 @@ nav ul li a {
         0.5px -0.5px 0 #000,
         -0.5px 0.5px 0 #000,
         0.5px 0.5px 0 #000;
-    padding-bottom: 4px;
+    padding-bottom: 0.222rem;
 }
 
 nav ul li a::after {
@@ -135,7 +144,7 @@ nav ul li a::after {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px;
+    height: 0.111rem;
     background-color: #42c1c7;
     transition: width 0.4s ease;
 }
@@ -149,20 +158,20 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 }
 
 .logo-header {
-    width: 114px;
-    margin-left: 45px;
-    height: 44px;
+    width: 6.3rem;
+    margin-left: 2.5rem;
+    height: 2.45rem;
 }
 
-.header-button, .form-group button {
+.header-button a, .form-group button {
     background: linear-gradient(90deg, #42c1c7, #7be8ee);
     border: none;
-    padding: 10px 25px;
+    padding: 0.56rem 1.39rem;
     cursor: pointer;
     border-radius: 18px;
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.22rem;
     transition: background 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
     align-content: center;
     align-items: center;
@@ -170,7 +179,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     height: min-content;
 }
 
-.header-button:hover, .form-group button:hover {
+.header-button a:hover, .form-group button:hover {
     background: linear-gradient(90deg, #7be8ee, #42c1c7);
     color: #fff;
     box-shadow: 0 4px 15px rgba(0, 173, 255, 0.4);
@@ -178,7 +187,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 }
 
 .form-group button {
-    margin-top: 40px;
+    margin-top: 2.22rem;
 }
 
 .header-button {
@@ -190,16 +199,16 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 }
 
 .button-img {
-    margin-right: 10px;
+    margin-right: 0.56rem;
 }
 
 h1 {
     color: #42c1c7;
     font-family: 'Gilroy', sans-serif;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 2.5rem;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 2.22rem;
 }
 
 .application-form {
@@ -215,27 +224,27 @@ h1 {
 }
 
 .radio-item {
-    margin-bottom: 15px;
+    margin-bottom: 0.83rem;
 }
 
 .radio-item label input {
-    margin-right: 15px;
+    margin-right: 0.83rem;
 }
 
 .form-group input,
 .form-group select {
-    padding: 10px;
+    padding: 0.56rem;
     border: 2px solid #42c1c7;
     border-radius: 45px;
     background-color: white;
     color: #000;
-    font-size: 16px;
+    font-size: 0.89rem;
     font-family: 'Gilroy', sans-serif;
-    padding-left: 20px;
+    padding-left: 1.11rem;
 }
 
 .inp {
-    margin-bottom: 20px;
+    margin-bottom: 1.11rem;
     width: 25%;
 }
 
@@ -246,7 +255,7 @@ h1 {
 
 .form-group input[type="checkbox"] {
     width: auto;
-    margin-right: 15px;
+    margin-right: 0.83rem;
 }
 
 .checkbox {
@@ -259,30 +268,32 @@ h1 {
     margin: 0px 0 15px 0px;
     color: #42c1c7;
     font-weight: 700;
-    width: 400px;
+    width: 22.22rem;
+}
+
+.footer-img {
+    margin-right: 0.28rem;
+    vertical-align: middle;
 }
 
 footer {
     text-align: center;
+    margin-bottom: 1.67rem;
     display: flex;
-    gap: 100px;
+    gap: 4.44rem;
     justify-content: center;
-    margin-left: 50px;
+    margin-left: 2.78rem;
 }
 
 .foot1, .foot2, .foot3 {
-    text-align: left;
-    width: 350px;
+    text-align: center;
+    width: 19.44rem;
     vertical-align: top;
     white-space: pre-line;
 }
 
-.foot2 {
-    width: 200px;
-}
-
 .foot1 p, .foot2 p, .foot3 p {
-    line-height: 30px;
+    line-height: 1.67rem;
 }
 
 footer p, footer a {
@@ -294,4 +305,80 @@ footer p, footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1740px) {
+    html {
+        font-size: 0.9rem;
+    }
+
+    nav ul li {
+        margin: 0px 8.5rem 0px 0px;
+    }
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    nav ul li {
+        margin: 0px 8rem 0px 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 0.7rem;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .nav-icon {
+        width: 2.5rem;
+        color: #fff;
+        display: inline;
+    }
+    
+    nav ul li {
+        margin: 0px 14rem 0px 0px;
+    }
+
+    .button-img {
+        margin-right: 0;
+        width: 1.67rem;
+    }
+}
+
+@media (max-width: 1030px) {
+
+    html {
+        font-size: 0.6rem;
+    }
+
+    .logo-header {
+        display: none;
+    }
+
+    .photo-carousel {
+        display: none;
+    }
+
+    nav ul li {
+        margin: 0px 15rem 0px 0px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0px 13rem 0px 0px;
+    }
 }

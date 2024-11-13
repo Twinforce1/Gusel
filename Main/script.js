@@ -35,7 +35,8 @@ const prevButton2 = document.querySelector('.prev-btn2');
 const nextButton2 = document.querySelector('.next-btn2');
 const items2 = Array.from(document.querySelectorAll('.merch-item'));
 
-const itemWidth2 = items2[0].offsetWidth + 20;
+const gap2 = getGap(merchTrack);
+const itemWidth2 = (items2[0].offsetWidth + gap2);
 
 let currentPosition2 = 0;
 
@@ -74,7 +75,8 @@ const prevButton3 = document.querySelector('.prev-btn3');
 const nextButton3 = document.querySelector('.next-btn3');
 const items3 = Array.from(document.querySelectorAll('.yakovlev-item'));
 
-const itemWidth3 = items3[0].offsetWidth + 20;
+const gap3 = getGap(yaTrack);
+const itemWidth3 = items3[0].offsetWidth + gap3;
 
 let currentPosition3 = 0;
 
@@ -114,7 +116,7 @@ const prevButton4 = document.querySelector('.prev-btn4');
 const nextButton4 = document.querySelector('.next-btn4');
 const items4 = Array.from(document.querySelectorAll('.panin-item'));
 
-const itemWidth4 = items4[0].offsetWidth + 20;
+const itemWidth4 = items4[0].offsetWidth + gap3;
 
 let currentPosition4 = 0;
 
@@ -153,9 +155,15 @@ const intervalTime = 6000;
 const photos1Track = document.querySelector('.photos1-track');
 const photos2Track = document.querySelector('.photos2-track');
 
+function getGap(track) {
+    const computedStyle = window.getComputedStyle(track);
+    return parseInt(computedStyle.gap) || 0;
+}
+
 function scroll(track, direction) {
     const photoWidth = track.firstElementChild.offsetWidth;
-    const offset = direction === 'left' ? -photoWidth - 16 : photoWidth + 16;
+    const gap = getGap(track);
+    const offset = direction === 'left' ? -(photoWidth + gap) : (photoWidth + gap);
 
     track.style.transition = 'transform 1.5s ease';
     track.style.transform = `translate3D(${offset}px, 0, 0)`;
@@ -164,7 +172,7 @@ function scroll(track, direction) {
         track.appendChild(track.firstElementChild);
         track.style.transition = 'none';
         track.style.transform = 'translate3D(0, 0, 0)';
-    }, 1500);
+    }, 2000);
 }
 
 function startCarousel() {

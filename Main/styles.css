@@ -469,7 +469,7 @@ h1 {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 1rem 0px 0px 1rem;
+    border-radius: 18px 0px 0px 18px;
     object-position: center;
 }
 
@@ -542,7 +542,7 @@ h1 {
 }
 
 .tabs a {
-    border-radius: 2rem;
+    border-radius: 36px;
 }
 
 .participants p {

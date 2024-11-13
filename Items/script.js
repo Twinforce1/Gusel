@@ -4,13 +4,19 @@ const prevButton2 = document.querySelector('.prev-btn2');
 const nextButton2 = document.querySelector('.next-btn2');
 const items2 = Array.from(document.querySelectorAll('.merch-item'));
 
-const itemWidth2 = items2[0].offsetWidth + 20;
+function getGap(track) {
+    const computedStyle = window.getComputedStyle(track);
+    return parseInt(computedStyle.gap) || 0;
+}
+
+const gap2 = getGap(merchTrack);
+const itemWidth2 = (items2[0].offsetWidth + gap2);
 
 let currentPosition2 = 0;
 
 function moveCarousel(position, transition = true) {
     merchTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
-    merchTrack.style.transform = `translate3D(${position}px, 0, 0)`;
+    merchTrack.style.transform = `translateX(${position}px)`;
 }
 
 nextButton2.addEventListener('click', () => {
