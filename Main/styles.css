@@ -545,21 +545,21 @@ footer {
     text-align: center;
     margin-bottom: 30px;
     display: flex;
-    gap: 120px;
+    gap: 80px;
     justify-content: center;
     margin-left: 50px;
 }
 
 .foot1, .foot2, .foot3 {
-    text-align: left;
+    text-align: center;
     width: 350px;
     vertical-align: top;
     white-space: pre-line;
 }
 
-.foot2 {
+/* .foot2 {
     width: 200px;
-}
+} */
 
 .foot1 p, .foot2 p, .foot3 p {
     line-height: 30px;
