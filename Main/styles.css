@@ -541,6 +541,11 @@ h1 {
     text-align: left;
 }
 
+.footer-img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
 footer {
     text-align: center;
     margin-bottom: 30px;
@@ -556,10 +561,6 @@ footer {
     vertical-align: top;
     white-space: pre-line;
 }
-
-/* .foot2 {
-    width: 200px;
-} */
 
 .foot1 p, .foot2 p, .foot3 p {
     line-height: 30px;
