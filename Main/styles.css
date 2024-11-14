@@ -121,7 +121,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0px 8rem 0px 0px;
+    margin: 0px 9.5rem 0px 0px;
     align-content: center;
     align-items: center;
     text-align: center;
@@ -603,7 +603,7 @@ footer a:hover {
     }
 
     nav ul li {
-        margin: 0px 7.5rem 0px 0px;
+        margin: 0px 8.5rem 0px 0px;
     }
 }
 
@@ -613,7 +613,7 @@ footer a:hover {
     }
 
     nav ul li {
-        margin: 0px 7rem 0px 0px;
+        margin: 0px 7.5rem 0px 0px;
     }
 }
 
