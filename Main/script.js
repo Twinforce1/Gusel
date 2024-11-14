@@ -29,6 +29,11 @@
 //     }
 // });
 
+function getGap(track) {
+    const computedStyle = window.getComputedStyle(track);
+    return parseInt(computedStyle.gap) || 0;
+}
+
 // Атрибутика
 const merchTrack = document.querySelector('.merch-track');
 const prevButton2 = document.querySelector('.prev-btn2');
@@ -154,11 +159,6 @@ const intervalTime = 6000;
 
 const photos1Track = document.querySelector('.photos1-track');
 const photos2Track = document.querySelector('.photos2-track');
-
-function getGap(track) {
-    const computedStyle = window.getComputedStyle(track);
-    return parseInt(computedStyle.gap) || 0;
-}
 
 function scroll(track, direction) {
     const photoWidth = track.firstElementChild.offsetWidth;

@@ -121,9 +121,10 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0px 9rem 0px 0px;
+    margin: 0px 8rem 0px 0px;
     align-content: center;
     align-items: center;
+    text-align: right;
 }
 
 nav ul li a {
@@ -561,17 +562,27 @@ footer {
     display: flex;
     gap: 4.44rem;
     justify-content: center;
-    margin-left: 2.78rem;
 }
 
 .foot1, .foot2, .foot3 {
-    text-align: center;
+    text-align: left;
     width: 19.44rem;
     vertical-align: top;
     white-space: pre-line;
 }
 
-.foot1 p, .foot2 p, .foot3 p {
+.logo-footer {
+    width: 6.3rem;
+    height: 2.45rem;
+}
+
+.logo-foot {
+    width: 19.44rem;
+    align-content: center;
+    margin-top: -1rem;
+}
+
+.logo-foot, .foot1 p, .foot2 p, .foot3 p {
     line-height: 1.67rem;
 }
 
@@ -592,7 +603,7 @@ footer a:hover {
     }
 
     nav ul li {
-        margin: 0px 8.5rem 0px 0px;
+        margin: 0px 7.5rem 0px 0px;
     }
 }
 
@@ -602,7 +613,7 @@ footer a:hover {
     }
 
     nav ul li {
-        margin: 0px 8rem 0px 0px;
+        margin: 0px 7rem 0px 0px;
     }
 }
 
