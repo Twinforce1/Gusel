@@ -653,10 +653,6 @@ footer a:hover {
         display: none;
     }
 
-    .photo-carousel {
-        display: none;
-    }
-
     nav ul li {
         margin: 0px 15rem 0px 0px;
     }
@@ -666,6 +662,10 @@ footer a:hover {
 @media (max-width: 900px) {
     html {
         font-size: 0.5rem;
+    }
+
+    .photo-carousel {
+        display: none;
     }
 
     nav ul li {

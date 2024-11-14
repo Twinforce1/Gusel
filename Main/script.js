@@ -161,7 +161,7 @@ const photos1Track = document.querySelector('.photos1-track');
 const photos2Track = document.querySelector('.photos2-track');
 
 function scroll(track, direction) {
-    const photoWidth = track.firstElementChild.offsetWidth;
+    const photoWidth = track.firstElementChild.offsetWidth + 1;
     const gap = getGap(track);
     const offset = direction === 'left' ? -(photoWidth + gap) : (photoWidth + gap);
 
