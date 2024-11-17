@@ -53,28 +53,33 @@
                 <form action="/send_story" method="post" enctype="multipart/form-data">
     
                     <div class="form-group">
-                        <input type="text" id="fullName" name="fullName" placeholder="ФИО" class="inp" required>
+                        <p>ФИО</p>
+                        <input type="text" id="fullName" name="fullName" class="inp" required>
                     </div>
                     
                     <div class="form-group">
-                        <input type="date" id="birthday" name="birthday" placeholder="Дата рождения" class="inp" required>
+                        <p>Дата рождения</p>
+                        <input type="date" id="birthday" name="birthday" class="inp" required>
                     </div>
     
                     <div class="form-group">
-                        <input type="tel" id="phone_number" name="phone_number" placeholder="Номер телефона для связи" pattern="\8\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" class="inp" required>
+                        <p>Номер телефона для связи</p>
+                        <input type="tel" id="guardianPhone" name="phone_number" placeholder="+7 (___) __-__" class="inp" required>
                     </div>
     
                     <div class="form-group story">
-                        <textarea id="story" name="story" placeholder="Расскажи свою историю" class="inp story" required></textarea>
+                        <p>Расскажи свою историю</p>
+                        <textarea id="story" name="story" class="inp story" required></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <input type="file" id="photo" name="photo" placeholder="Прикрепи свою фотографию" class="inp" accept="image/*">
+                        <p>Прикрепи свою фотографию</p>
+                        <input type="file" id="photo" name="photo" class="inp" accept="image/*">
                     </div>
                     
                     <div class="form-group checkbox">
                         <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement">Я согласен на обработку персональных данных</label>
+                        <label for="agreement"><p>Я согласен на <a href="/static/Assets/personal_data_consent.pdf">обработку</a> персональных данных</p></label>
                     </div>
     
                     <div class="form-group">
@@ -104,6 +109,7 @@
             </div>
         </footer>
         
+        <script src="/static/Form/script.js" defer></script>
         <script src="/static/common.js" defer></script>
     </div>
 </body>
