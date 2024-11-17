@@ -54,11 +54,13 @@
                 <form action="/register" method="post" class="form">
     
                     <div class="form-group">
-                        <input type="text" id="fullName" name="fullName" placeholder="ФИО" required class="inp">
+                        <p>ФИО</p>
+                        <input type="text" id="fullName" name="fullName" required class="inp">
                     </div>
     
                     <div class="form-group">
-                        <input type="url" id="videoLink" name="videoLink" placeholder="Ссылка на видео-заявку в ВК для участия" required class="inp">
+                        <p>Ссылка на видео-заявку в ВК для участия</p>
+                        <input type="url" id="videoLink" name="videoLink" required class="inp">
                     </div>
                     
                     <div class="form-group">
@@ -97,20 +99,23 @@
                     </div>
                     
                     <div class="form-group">
-                        <input type="number" id="age" name="age" placeholder="Количество полных лет участника" min="6" max="14" required class="inp">
+                        <p>Количество полных лет участника</p>
+                        <input type="number" id="age" name="age" min="6" max="14" required class="inp">
                     </div>
                     
                     <div class="form-group">
-                        <input type="text" id="guardianName" name="guardianName" placeholder="ФИО сопровождающего" required class="inp">
+                        <p>ФИО сопровождающего</p>
+                        <input type="text" id="guardianName" name="guardianName" required class="inp">
                     </div>
                     
                     <div class="form-group">
-                        <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="Номер телефона сопровождающего" pattern="\8\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required class="inp">
+                        <p>Номер телефона сопровождающего</p>
+                        <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="+7 (___) ___-__-__" required class="inp">
                     </div>
                     
                     <div class="form-group checkbox">
                         <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement">Я согласен на обработку персональных данных</label>
+                        <label for="agreement"><p>Я согласен на <a href="/static/Assets/personal_data_consent.pdf">обработку</a> персональных данных</p></label>
                     </div>
                     
                     <div class="form-group">
@@ -140,6 +145,7 @@
             </div>
         </footer>
         
+        <script src="/static/Form/script.js"></script>
         <script src="/static/common.js" defer></script>
     </div>
 </body>

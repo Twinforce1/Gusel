@@ -116,12 +116,11 @@ header.blur::before {
 nav ul {
     list-style: none;
     display: flex;
-    padding-inline-start: 0px;
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0px 9.5rem 0px 0px;
+    margin: 0px 8.5rem 0px 0px;
     align-content: center;
     align-items: center;
 }
@@ -336,7 +335,7 @@ footer a:hover {
     html {
         font-size: 0.7rem;
     }
-
+/* 
     .nav-text {
         display: none;
     }
@@ -346,9 +345,9 @@ footer a:hover {
         color: #fff;
         display: inline;
     }
-    
+     */
     nav ul li {
-        margin: 0px 14rem 0px 0px;
+        margin: 0px 8rem 0px 0px;
     }
 
     .button-img {
@@ -363,12 +362,12 @@ footer a:hover {
         font-size: 0.6rem;
     }
 
-    .logo-header {
+    /* .logo-header {
         display: none;
-    }
+    } */
 
     nav ul li {
-        margin: 0px 15rem 0px 0px;
+        margin: 0px 7rem 0px 0px;
     }
 
 }
@@ -383,6 +382,30 @@ footer a:hover {
     }
 
     nav ul li {
-        margin: 0px 13rem 0px 0px;
+        margin: 0px 7rem 0px 0px;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 0.5rem;
+    }
+
+    .photo-carousel {
+        display: none;
+    }
+
+    nav ul li {
+        margin: 0px 5rem 0px 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0px 2.5rem 0px 0px;
     }
 }

@@ -35,44 +35,44 @@ function getGap(track) {
 }
 
 // Атрибутика
-const merchTrack = document.querySelector('.merch-track');
-const prevButton2 = document.querySelector('.prev-btn2');
-const nextButton2 = document.querySelector('.next-btn2');
-const items2 = Array.from(document.querySelectorAll('.merch-item'));
+// const merchTrack = document.querySelector('.merch-track');
+// const prevButton2 = document.querySelector('.prev-btn2');
+// const nextButton2 = document.querySelector('.next-btn2');
+// const items2 = Array.from(document.querySelectorAll('.merch-item'));
 
-const gap2 = getGap(merchTrack);
-const itemWidth2 = (items2[0].offsetWidth + gap2);
+// const gap2 = getGap(merchTrack);
+// const itemWidth2 = (items2[0].offsetWidth + gap2);
 
-let currentPosition2 = 0;
+// let currentPosition2 = 0;
 
-function moveCarousel(position, transition = true) {
-    merchTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
-    merchTrack.style.transform = `translateX(${position}px)`;
-}
+// function moveCarousel(position, transition = true) {
+//     merchTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
+//     merchTrack.style.transform = `translateX(${position}px)`;
+// }
 
-nextButton2.addEventListener('click', () => {
-    if (currentPosition2 > -(itemWidth2 * (items2.length - 1))) {
-        currentPosition2 -= itemWidth2;
-        moveCarousel(currentPosition2);
-    } else {
-        currentPosition2 = 0;
-        setTimeout(() => {
-            moveCarousel(currentPosition2);
-        }, 300);
-    }
-});
+// nextButton2.addEventListener('click', () => {
+//     if (currentPosition2 > -(itemWidth2 * (items2.length - 1))) {
+//         currentPosition2 -= itemWidth2;
+//         moveCarousel(currentPosition2);
+//     } else {
+//         currentPosition2 = 0;
+//         setTimeout(() => {
+//             moveCarousel(currentPosition2);
+//         }, 300);
+//     }
+// });
 
-prevButton2.addEventListener('click', () => {
-    if (currentPosition2 < 0) {
-        currentPosition2 += itemWidth2;
-        moveCarousel(currentPosition2);
-    } else {
-        currentPosition2 = -(itemWidth2 * (items2.length - 1));
-        setTimeout(() => {
-            moveCarousel(currentPosition2);
-        }, 300);
-    }
-});
+// prevButton2.addEventListener('click', () => {
+//     if (currentPosition2 < 0) {
+//         currentPosition2 += itemWidth2;
+//         moveCarousel(currentPosition2);
+//     } else {
+//         currentPosition2 = -(itemWidth2 * (items2.length - 1));
+//         setTimeout(() => {
+//             moveCarousel(currentPosition2);
+//         }, 300);
+//     }
+// });
 
 // Команда Яковлева
 const yaTrack = document.querySelector('.yakovlev-track');
