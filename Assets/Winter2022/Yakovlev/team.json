@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Александр Бурмистров",
+        "image": "/static/Assets/Winter2022/Yakovlev/Burmistrov.jpg"
+    },
+    {
+        "name": "Григорий Дронов",
+        "image": "/static/Assets/Winter2022/Yakovlev/Dronov.jpg"
+    },
+    {
+        "name": "Дмитрий Федоров",
+        "image": "/static/Assets/Winter2022/Yakovlev/Fedorov.jpg"
+    },
+    {
+        "name": "Стас Ярушин",
+        "image": "/static/Assets/Winter2022/Yakovlev/Yarushin.jpg"
+    },
+    {
+        "name": "Михаил Фисенко",
+        "image": "/static/Assets/Winter2022/Yakovlev/Fisenko.jpg"
+    },
+    {
+        "name": "Николай Голдобин",
+        "image": "/static/Assets/Winter2022/Yakovlev/Goldobin.jpg"
+    },
+    {
+        "name": "Артур Хайруллин (LilArchi)",
+        "image": "/static/Assets/Winter2022/Yakovlev/Hairullin.jpg"
+    },
+    {
+        "name": "Даниил Крапивников (Крап)",
+        "image": "/static/Assets/Winter2022/Yakovlev/Krap.jpg"
+    },
+    {
+        "name": "Дмитрий Лукашов",
+        "image": "/static/Assets/Winter2022/Yakovlev/Lukashov.jpg"
+    },
+    {
+        "name": "Субхан Мамедов (SUBO)",
+        "image": "/static/Assets/Winter2022/Yakovlev/Mamedov.jpg"
+    },
+    {
+        "name": "Константин Рякин (Евгенич)",
+        "image": "/static/Assets/Winter2022/Yakovlev/Ryakin.jpg"
+    },
+    {
+        "name": "Артем Шаков (SHAKSKILLS)",
+        "image": "/static/Assets/Winter2022/Yakovlev/Shakov.jpg"
+    },
+    {
+        "name": "Иван Трегубов",
+        "image": "/static/Assets/Winter2022/Yakovlev/Tregubov.jpg"
+    },
+    {
+        "name": "Денис Зернов",
+        "image": "/static/Assets/Winter2022/Yakovlev/Zernov.jpg"
+    }
+]

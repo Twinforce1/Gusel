@@ -74,85 +74,133 @@ function getGap(track) {
 //     }
 // });
 
-// Команда Яковлева
-const yaTrack = document.querySelector('.yakovlev-track');
-const prevButton3 = document.querySelector('.prev-btn3');
-const nextButton3 = document.querySelector('.next-btn3');
-const items3 = Array.from(document.querySelectorAll('.yakovlev-item'));
+let items3 = [];
+let items4 = [];
+const teamContainers = {
+    "Yakovlev": document.querySelector(".yakovlev-track"),
+    "Panin": document.querySelector(".panin-track"),
+};
 
-const gap3 = getGap(yaTrack);
-const itemWidth3 = items3[0].offsetWidth + gap3;
 
-let currentPosition3 = 0;
+async function loadTeam(season, teamName, itemArray) {
+    try {
+        const response = await fetch(`/api/teams?season=${season}&team=${teamName}`);
+        if (!response.ok) throw new Error("Ошибка загрузки команды");
 
-function moveCarousel2(position, transition = true) {
-    yaTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
-    yaTrack.style.transform = `translateX(${position}px)`;
+        const teamData = await response.json();
+        const container = teamContainers[teamName];
+        let itemType = (teamName == "Yakovlev") ? "yakovlev-item" : "panin-item";  
+        container.innerHTML = "";
+
+        teamData.forEach(member => {
+            const memberDiv = document.createElement("div");
+            memberDiv.className = itemType;
+
+            memberDiv.innerHTML = `
+            <img src="${member.image}" alt="${member.name}" class="carousel-photo" loading="lazy">
+            <h2>${member.name}</h2>
+            <p>Описание</p>
+            `;
+            container.appendChild(memberDiv);
+        });
+        itemArray.length = 0;
+        itemArray.push(...Array.from(container.querySelectorAll(`.${itemType}`)));
+        let number = (teamName == "Yakovlev") ? 3 : 4; 
+        initializeCarousel(itemArray, number);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-nextButton3.addEventListener('click', () => {
-    if (currentPosition3 > -(itemWidth3 * (items3.length - 1))) {
-        currentPosition3 -= itemWidth3;
-        moveCarousel2(currentPosition3);
-    } else {
-        currentPosition3 = 0;
-        setTimeout(() => {
-            moveCarousel2(currentPosition3);
-        }, 300);
-    }
-});
 
-prevButton3.addEventListener('click', () => {
-    if (currentPosition3 < 0) {
-        currentPosition3 += itemWidth3;
-        moveCarousel2(currentPosition3);
-    } else {
-        currentPosition3 = -(itemWidth3 * (items3.length - 1));
-        setTimeout(() => {
-            moveCarousel2(currentPosition3);
-        }, 300);
-    }
-});
-
-// Команда Панина
-
-const paninTrack = document.querySelector('.panin-track');
-const prevButton4 = document.querySelector('.prev-btn4');
-const nextButton4 = document.querySelector('.next-btn4');
-const items4 = Array.from(document.querySelectorAll('.panin-item'));
-
-const itemWidth4 = items4[0].offsetWidth + gap3;
-
-let currentPosition4 = 0;
-
-function moveCarousel3(position, transition = true) {
-    paninTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
-    paninTrack.style.transform = `translateX(${position}px)`;
+async function loadYear(season) {
+    await loadTeam(season, "Yakovlev", items3);
+    await loadTeam(season, "Panin", items4);
 }
 
-nextButton4.addEventListener('click', () => {
-    if (currentPosition4 > -(itemWidth4 * (items4.length - 1))) {
-        currentPosition4 -= itemWidth4;
-        moveCarousel3(currentPosition4);
-    } else {
-        currentPosition4 = 0;
-        setTimeout(() => {
-            moveCarousel3(currentPosition4);
-        }, 300);
-    }
-});
+loadYear("Winter2022");
 
-prevButton4.addEventListener('click', () => {
-    if (currentPosition4 < 0) {
-        currentPosition4 += itemWidth4;
-        moveCarousel3(currentPosition4);
-    } else {
-        currentPosition4 = -(itemWidth4 * (items4.length - 1));
-        setTimeout(() => {
-            moveCarousel3(currentPosition4);
-        }, 300);
+function initializeCarousel(itemArray, carouselNumber) {
+    let trackName = (carouselNumber == 3) ? '.yakovlev-track' : '.panin-track';
+    const yaTrack = document.querySelector(trackName);
+    const prevButton3 = document.querySelector(`.prev-btn${carouselNumber}`);
+    const nextButton3 = document.querySelector(`.next-btn${carouselNumber}`);
+    //const items3 = Array.from(document.querySelectorAll('.yakovlev-item'));
+
+    const gap3 = getGap(yaTrack);
+    const itemWidth = itemArray[0].offsetWidth + gap3;
+
+    let currentPosition = 0;
+
+    function moveCarousel2(position, transition = true) {
+        yaTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
+        yaTrack.style.transform = `translateX(${position}px)`;
     }
-});
+
+    nextButton3.addEventListener('click', () => {
+        if (currentPosition > -(itemWidth * (itemArray.length - 1))) {
+            currentPosition -= itemWidth;
+            moveCarousel2(currentPosition);
+        } else {
+            currentPosition3 = 0;
+            setTimeout(() => {
+                moveCarousel2(currentPosition);
+            }, 300);
+        }
+    });
+
+    prevButton3.addEventListener('click', () => {
+        if (currentPosition < 0) {
+            currentPosition += itemWidth;
+            moveCarousel2(currentPosition);
+        } else {
+            currentPosition = -(itemWidth * (itemArray.length - 1));
+            setTimeout(() => {
+                moveCarousel2(currentPosition);
+            }, 300);
+        }
+    });
+}
+
+// // Команда Панина
+
+// const paninTrack = document.querySelector('.panin-track');
+// const prevButton4 = document.querySelector('.prev-btn4');
+// const nextButton4 = document.querySelector('.next-btn4');
+// //const items4 = Array.from(document.querySelectorAll('.panin-item'));
+
+// const itemWidth4 = items4[0].offsetWidth + gap3;
+
+// let currentPosition4 = 0;
+
+// function moveCarousel3(position, transition = true) {
+//     paninTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
+//     paninTrack.style.transform = `translateX(${position}px)`;
+// }
+
+// nextButton4.addEventListener('click', () => {
+//     if (currentPosition4 > -(itemWidth4 * (items4.length - 1))) {
+//         currentPosition4 -= itemWidth4;
+//         moveCarousel3(currentPosition4);
+//     } else {
+//         currentPosition4 = 0;
+//         setTimeout(() => {
+//             moveCarousel3(currentPosition4);
+//         }, 300);
+//     }
+// });
+
+// prevButton4.addEventListener('click', () => {
+//     if (currentPosition4 < 0) {
+//         currentPosition4 += itemWidth4;
+//         moveCarousel3(currentPosition4);
+//     } else {
+//         currentPosition4 = -(itemWidth4 * (items4.length - 1));
+//         setTimeout(() => {
+//             moveCarousel3(currentPosition4);
+//         }, 300);
+//     }
+// });
 
 //Автоматические карусели
 const intervalTime = 6000;

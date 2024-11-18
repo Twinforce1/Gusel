@@ -1,9 +1,10 @@
-from fastapi import FastAPI, Request, Form, UploadFile, File
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import FastAPI, Request, Form, UploadFile, File, Query, HTTPException
+from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
 from pathlib import Path
+import os
 import json
 import shutil
 import uuid
@@ -15,6 +16,7 @@ app.mount("/static", StaticFiles(directory="."), name="static")
 templates = Jinja2Templates(directory=".")
 
 UPLOAD_DIR = Path("uploaded_photos")
+ASSETS_PATH = "./Assets"
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 items_file_path = Path("items.json")
@@ -28,6 +30,20 @@ else:
     items = []
 
 print(items)
+
+
+@app.get("/api/teams", response_class=JSONResponse)
+async def get_team(season: str = Query(...), team: str = Query(...)):
+    json_path = os.path.join(ASSETS_PATH, season, team, "team.json")
+    print(json_path)
+    if not os.path.exists(json_path):
+        print("It's here")
+        raise HTTPException(status_code=404, detail="Can't find team.json")
+    
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return JSONResponse(content=data)
+    
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):

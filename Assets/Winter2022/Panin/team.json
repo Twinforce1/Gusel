@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Данил Алалыкин",
+        "image": "/static/Assets/Winter2022/Panin/Alalykin.jpg"
+    },
+    {
+        "name": "Данил Башкиров",
+        "image": "/static/Assets/Winter2022/Panin/Bashkirov.jpg"
+    },
+    {
+        "name": "Мария Басс",
+        "image": "/static/Assets/Winter2022/Panin/Bass.jpg"
+    },
+    {
+        "name": "Илья Ежов",
+        "image": "/static/Assets/Winter2022/Panin/Ezhov.jpg"
+    },
+    {
+        "name": "Камил Гаджиев",
+        "image": "/static/Assets/Winter2022/Panin/Gadzhiev.jpg"
+    },
+    {
+        "name": "Павел Коледов",
+        "image": "/static/Assets/Winter2022/Panin/Koledov.jpg"
+    },
+    {
+        "name": "Николай Кулемин",
+        "image": "/static/Assets/Winter2022/Panin/Kulemin.jpg"
+    },
+    {
+        "name": "Ярослав Кузьмичев (YARKUZYA)",
+        "image": "/static/Assets/Winter2022/Panin/Kuzmichev.jpg"
+    },
+    {
+        "name": "Вячеслав Малафеев",
+        "image": "/static/Assets/Winter2022/Panin/Malafeev.jpg"
+    },
+    {
+        "name": "Павел Маркидан",
+        "image": "/static/Assets/Winter2022/Panin/Markidan.jpg"
+    },
+    {
+        "name": "Шакир Мухамадуллин",
+        "image": "/static/Assets/Winter2022/Panin/Muhamadullin.jpg"
+    },
+    {
+        "name": "Алексей Пустозеров",
+        "image": "/static/Assets/Winter2022/Panin/Pustozerov.jpg"
+    },
+    {
+        "name": "Алексей Шевченко",
+        "image": "/static/Assets/Winter2022/Panin/Shevchenko.jpg"
+    },
+    {
+        "name": "Владимир Тимофеев (Vobon)",
+        "image": "/static/Assets/Winter2022/Panin/Timofeev.jpg"
+    }
+]

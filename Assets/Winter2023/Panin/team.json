@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Данил Башкиров",
+        "image": "/static/Assets/Winter2023/Panin/Bashkirov.jpg"
+    },
+    {
+        "name": "Евгений Бирюков",
+        "image": "/static/Assets/Winter2023/Panin/Biryukov.jpg"
+    },
+    {
+        "name": "Илья Ежов",
+        "image": "/static/Assets/Winter2023/Panin/Ezhov.jpg"
+    },
+    {
+        "name": "Камил Гаджиев",
+        "image": "/static/Assets/Winter2023/Panin/Gadzhiev.jpg"
+    },
+    {
+        "name": "Максим Гончаров",
+        "image": "/static/Assets/Winter2023/Panin/Goncharov.jpg"
+    },
+    {
+        "name": "Динар Хафизуллин",
+        "image": "/static/Assets/Winter2023/Panin/Hafizullin.jpg"
+    },
+    {
+        "name": "Павел Коледов",
+        "image": "/static/Assets/Winter2023/Panin/Koledov.jpg"
+    },
+    {
+        "name": "Ярослав Кузьмичев (YARKUZYA)",
+        "image": "/static/Assets/Winter2023/Panin/Kuzmichev.jpg"
+    },
+    {
+        "name": "Дмитрий Мигунов",
+        "image": "/static/Assets/Winter2023/Panin/Migunov.jpg"
+    },
+    {
+        "name": "Алексей Пустозеров",
+        "image": "/static/Assets/Winter2023/Panin/Pustozerov.jpg"
+    },
+    {
+        "name": "Егор Сучков",
+        "image": "/static/Assets/Winter2023/Panin/Suchkov.jpg"
+    },
+    {
+        "name": "Евгений Тимкин",
+        "image": "/static/Assets/Winter2023/Panin/Timkin.jpg"
+    },
+    {
+        "name": "Андрей Зубарев",
+        "image": "/static/Assets/Winter2023/Panin/Zubarev.jpg"
+    }
+]
