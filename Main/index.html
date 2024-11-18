@@ -111,9 +111,10 @@
             <!-- О проекте -->
             <section id="about" class="about">
                     <h1>О проекте</h1>
-                    <p>Уральская классика - это уникальное событие в российском спорте, органично сочетающее:
-                        <br>- Профессиональных спортсменов и блогеров, их близость к зрителям, детям и СМИ
-                        <br>- Игра не на стадионе, а на естественном льду озера, как символ возвращения в детство, к истокам
+                    <p>Уральская классика - это уникальное событие в российском спорте.
+                        <br><br>Мы собираем своих друзей - олимпийских чемпионов, блогеров,
+                        <br>артистов и спортсменов из разных видов спорта и идем играть на улицу вместе с детьми.
+                        <br><br>Мы уходим со стадионов и играем на открытом льду, для нас это символ возвращения в детство.
                     </p>
                     <div class="button-arrow">
                         <a href="/about" class="text-button-color"><img src="/static/Assets/receipt.svg" class="button-img">За вдохновением</a>
@@ -166,7 +167,16 @@
             <!-- Регистрация детей -->
             <section id="register" class="register">
                     <h1>Регистрация детей</h1>
-                    <p>По традиции на лед вместе с профессионалами<br>и приглашенными звездами выйдут играть дети! <br><br> Открыт конкурс для участников в возрасте от 6 до 14 лет<br><br>Чтобы стать участником, нужно:<br>- Снять видео и рассказать, почему ты должен попасть в одну из команд - Григория Панина или Егора Яковлева<br>- Выложить свое видео в ВК Клипы<br>- Заполнить форму для участия<br><br><b>Набор продлится до 8 декабря<b></p>
+                    <p>По традиции на лед вместе с профессионалами
+                        <br>и приглашенными звездами выйдут играть дети!
+                        <br><br> Открыт конкурс для участников в возрасте от 6 до 14 лет
+                        <br><br>Чтобы стать участником, нужно:
+                        <br>- Снять видео и рассказать, почему ты должен попасть в одну из команд -
+                        <br>Григория Панина или Егора Яковлева
+                        <br>- Выложить свое видео в ВК Клипы
+                        <br>- Заполнить форму для участия
+                        <br><br><b>Набор продлится до 8 декабря<b>
+                    </p>
                     <p style="color:#42c1c7">* При большом количестве заявок, предпочтение будет отдаваться детям, которые ранее не принимали участие.</p>
                     <div class="button-arrow">
                         <a href="/apply" class="text-button-color"><img src="/static/Assets/pen-tool.svg" class="button-img">Заявка на участие</a>
@@ -177,7 +187,7 @@
             <!-- Атрибутика -->
             <section class="merch-carousel">
                 <h1>Атрибутика</h1>
-                <p>Скоро здесь будут товары</p>
+                <p id="participants-id">Скоро здесь будут товары</p>
                 <!-- <div class="merch-container">
                     <button class="carousel-btn2 prev-btn2"><img src="/static/Assets/arrow2.svg" class="carousel-button-img1"></button>
                     <div class="merch">
@@ -187,7 +197,7 @@
                                     <img src="{{ item.image }}" alt="Футболка" class="carousel-photo" loading="lazy">
                                     <p>{{ item.name }}</p>
                                     <div class="price-add">
-                                        <a href="/item/{{ item.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/shopping-bag.svg" class="button-img"> {{ item.price }} руб.</a>
+                                        <a href="/item/{{ item.id }}" class="text-button-color price"><img src="/static/Assets/shopping-bag.svg" class="button-img"> {{ item.price }} руб.</a>
                                     </div>
                                 </div>
                             {% endfor %}
@@ -207,6 +217,8 @@
                     <a href="#" class="text-button-color">Зима 2023</a>
                     <a href="#" class="text-button-color">Зима 2022</a>
                 </div>
+
+                <!-- Сейчас тут команды за зиму 2022 -->
         
                 <h1>Команда Яковлева</h1>
                 <div class="yakovlev-container">
@@ -214,28 +226,73 @@
                     <div class="carousel">
                         <div class="yakovlev-track">
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot1.webp" alt="Алексей Никитин" class="carousel-photo" loading="lazy">
-                                <h2>Алексей Никитин</h2>
+                                <img src="/static/Assets/Winter2022/Yakovlev/Fisenko.jpg" alt="Михаил Фисенко" class="carousel-photo" loading="lazy">
+                                <h2>Михаил Фисенко</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot2.jpg" alt="Михаил Волков" class="carousel-photo" loading="lazy">
-                                <h2>Михаил Волков</h2>
+                                <img src="/static/Assets/Winter2022/Yakovlev/Zernov.jpg" alt="Денис Зернов" class="carousel-photo" loading="lazy">
+                                <h2>Денис Зернов</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot3.jpg" alt="Сергей Морозов" class="carousel-photo" loading="lazy">
-                                <h2>Сергей Морозов</h2>
+                                <img src="/static/Assets/Winter2022/Yakovlev/Goldobin.jpg" alt="Николай Голдобин" class="carousel-photo" loading="lazy">
+                                <h2>Николай Голдобин</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot4.jpg" alt="Владимир Соколов" class="carousel-photo" loading="lazy">
-                                <h2>Владимир Соколов</h2>
+                                <img src="/static/Assets/Winter2022/Yakovlev/Dronov.jpg" alt="Григорий Дронов" class="carousel-photo" loading="lazy">
+                                <h2>Григорий Дронов</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="yakovlev-item">
-                                <img src="/static/Assets/kot5.jpeg" alt="Иван Иванов" class="carousel-photo" loading="lazy">
-                                <h2>Иван Иванов</h2>
+                                <img src="/static/Assets/Winter2022/Yakovlev/Ryakin.jpg" alt="Константин Рякин (Евгенич)" class="carousel-photo" loading="lazy">
+                                <h2>Константин Рякин (Евгенич)</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Mamedov.jpg" alt="Субхан Мамедов (SUBO)" class="carousel-photo" loading="lazy">
+                                <h2>Субхан Мамедов (SUBO)</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Shakov.jpg" alt="Артем Шаков (SHAKSKILLS)" class="carousel-photo" loading="lazy">
+                                <h2>Артем Шаков (SHAKSKILLS)</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Tregubov.jpg" alt="Иван Трегубов" class="carousel-photo" loading="lazy">
+                                <h2>Иван Трегубов</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Lukashov.jpg" alt="Дмитрий Лукашов" class="carousel-photo" loading="lazy">
+                                <h2>Дмитрий Лукашов</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Hairullin.jpg" alt="Артур Хайруллин (LilArchi)" class="carousel-photo" loading="lazy">
+                                <h2>Артур Хайруллин (LilArchi)</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Yarushin.jpg" alt="Стас Ярушин" class="carousel-photo" loading="lazy">
+                                <h2>Стас Ярушин</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Krap.jpg" alt="Даниил Крапивников (Крап)" class="carousel-photo" loading="lazy">
+                                <h2>Даниил Крапивников (Крап)</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Fedorov.jpg" alt="Дмитрий Федоров" class="carousel-photo" loading="lazy">
+                                <h2>Дмитрий Федоров</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="yakovlev-item">
+                                <img src="/static/Assets/Winter2022/Yakovlev/Burmistrov.jpg" alt="Александр Бурмистров" class="carousel-photo" loading="lazy">
+                                <h2>Александр Бурмистров</h2>
                                 <p>Описание</p>
                             </div>
                         </div>
@@ -249,28 +306,73 @@
                     <div class="carousel">
                         <div class="panin-track">
                             <div class="panin-item">
-                                <img src="/static/Assets/pes1.jpg" alt="Павел Романов" class="carousel-photo" loading="lazy">
-                                <h2>Павел Романов</h2>
+                                <img src="/static/Assets/Winter2022/Panin/Apalykin.jpg" alt="Даниил Апалыкин" class="carousel-photo" loading="lazy">
+                                <h2>Даниил Апалыкин</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes2.jpg" alt="Андрей Зуев" class="carousel-photo" loading="lazy">
-                                <h2>Андрей Зуев</h2>
+                                <img src="/static/Assets/Winter2022/Panin/Bashkirov.jpg" alt="Данил Башкиров" class="carousel-photo" loading="lazy">
+                                <h2>Данил Башкиров</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes3.jpg" alt="Игорь Лебедев" class="carousel-photo" loading="lazy">
-                                <h2>Игорь Лебедев</h2>
+                                <img src="/static/Assets/Winter2022/Panin/Bass.jpg" alt="Мария Басс" class="carousel-photo" loading="lazy">
+                                <h2>Мария Басс</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes4.webp" alt="Артём Киселёв" class="carousel-photo" loading="lazy">
-                                <h2>Артём Киселёв</h2>
+                                <img src="/static/Assets/Winter2022/Panin/Ezhov.jpg" alt="Илья Ежов" class="carousel-photo" loading="lazy">
+                                <h2>Илья Ежов</h2>
                                 <p>Описание</p>
                             </div>
                             <div class="panin-item">
-                                <img src="/static/Assets/pes5.jpg" alt="Виталий Лукащук" class="carousel-photo" loading="lazy">
-                                <h2>Виталий Лукащук</h2>
+                                <img src="/static/Assets/Winter2022/Panin/Gadzhiev.jpg" alt="Камил Гаджиев" class="carousel-photo" loading="lazy">
+                                <h2>Камил Гаджиев</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Koledov.jpg" alt="Павел Коледов" class="carousel-photo" loading="lazy">
+                                <h2>Павел Коледов</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Kulemin.jpg" alt="Николай Кулемин" class="carousel-photo" loading="lazy">
+                                <h2>Николай Кулемин</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Kuzmichev.jpg" alt="Ярослав Кузьмичев (YARKUZYA)" class="carousel-photo" loading="lazy">
+                                <h2>Ярослав Кузьмичев (YARKUZYA)</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Malafeev.jpg" alt="Вячеслав Малафеев" class="carousel-photo" loading="lazy">
+                                <h2>Вячеслав Малафеев</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Markidan.jpg" alt="Павел Маркидан" class="carousel-photo" loading="lazy">
+                                <h2>Павел Маркидан</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Muhamadullin.jpg" alt="Шакир Мухамадуллин" class="carousel-photo" loading="lazy">
+                                <h2>Шакир Мухамадуллин</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Pustozerov.jpg" alt="Алексей Пустозеров" class="carousel-photo" loading="lazy">
+                                <h2>Алексей Пустозеров</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Shevchenko.jpg" alt="Алексей Шевченко" class="carousel-photo" loading="lazy">
+                                <h2>Алексей Шевченко</h2>
+                                <p>Описание</p>
+                            </div>
+                            <div class="panin-item">
+                                <img src="/static/Assets/Winter2022/Panin/Timofeev.jpg" alt="Владимир Тимофеев (Vobon)" class="carousel-photo" loading="lazy">
+                                <h2>Владимир Тимофеев (Vobon)</h2>
                                 <p>Описание</p>
                             </div>
                         </div>

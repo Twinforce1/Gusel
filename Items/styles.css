@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: 'Gilroy', sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-image: url(../Assets/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -203,7 +203,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 
 .product {
     display: flex;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .product-images {

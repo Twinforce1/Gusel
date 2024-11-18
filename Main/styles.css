@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: 'Gilroy', sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-image: url(../Assets/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -266,7 +266,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
 .about, .heroes, .register, .merch-carousel, .participants {
     text-align: left;
     line-height: 2.22rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .register p {
@@ -275,8 +275,8 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     font-weight: 400;
 }
 
-.about p, .heroes p {
-    margin-bottom: 1.39rem;
+.about p {
+    margin-bottom: 1.5rem;
 }
 
 .button-arrow {
@@ -297,7 +297,7 @@ h1 {
 }
 
 .merch-carousel, .participants {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .merch-carousel p {
@@ -331,8 +331,9 @@ h1 {
     text-align: left;
     border-radius: 18px;
     height: auto;
-    flex: 0 0 calc(25% - 1.11rem);
-    max-width: calc(25% - 1.11rem);
+    flex: 0 0 25%;
+    width: 4vw;
+    /* max-width: calc(25% - 1.11rem); */
     display: flex;
     flex-direction: column;
     vertical-align: bottom;
@@ -415,7 +416,7 @@ h1 {
 }
 
 .heroes p {
-    margin-bottom: 0.56rem;
+    margin-bottom: 1.1rem;
 }
 
 .hero-container {

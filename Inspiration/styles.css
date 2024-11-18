@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: 'Gilroy', sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-image: url(../Assets/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,6 +67,10 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.content p {
+    line-height: 2.22rem;
 }
 
 header {
@@ -210,6 +214,11 @@ h1 {
     margin-bottom: 6.67rem;
 }
 
+.info-section s {
+    text-decoration: underline;
+    color: #fff;
+}
+
 .footer-img {
     margin-right: 0.28rem;
     vertical-align: middle;
@@ -281,17 +290,7 @@ footer a:hover {
     html {
         font-size: 0.7rem;
     }
-/* 
-    .nav-text {
-        display: none;
-    }
 
-    .nav-icon {
-        width: 2.5rem;
-        color: #fff;
-        display: inline;
-    }
-     */
     nav ul li {
         margin: 0px 8rem 0px 0px;
     }
@@ -307,10 +306,6 @@ footer a:hover {
     html {
         font-size: 0.6rem;
     }
-
-    /* .logo-header {
-        display: none;
-    } */
 
     nav ul li {
         margin: 0px 7rem 0px 0px;
