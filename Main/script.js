@@ -97,7 +97,7 @@ async function loadTeam(season, teamName, itemArray) {
             memberDiv.className = `${itemType} fade-in`;
 
             memberDiv.innerHTML = `
-            <img src="${member.image}" alt="${member.name}" class="carousel-photo" loading="lazy">
+            <img src="${member.image}" alt="${member.name}" class="carousel-photo">
             <h2>${member.name}</h2>
             `;
 

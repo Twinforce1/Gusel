@@ -1,5 +1,9 @@
 [
     {
+        "name": "Егор Яковлев",
+        "image": "/static/Assets/Winter2022/Yakovlev/Yakovlev.jpg"
+    },
+    {
         "name": "Александр Бурмистров",
         "image": "/static/Assets/Winter2022/Yakovlev/Burmistrov.jpg"
     },
