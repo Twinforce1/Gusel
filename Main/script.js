@@ -94,13 +94,17 @@ async function loadTeam(season, teamName, itemArray) {
 
         teamData.forEach(member => {
             const memberDiv = document.createElement("div");
-            memberDiv.className = itemType;
+            memberDiv.className = `${itemType} fade-in`;
 
             memberDiv.innerHTML = `
             <img src="${member.image}" alt="${member.name}" class="carousel-photo" loading="lazy">
             <h2>${member.name}</h2>
-            <p>Описание</p>
             `;
+
+            memberDiv.addEventListener('animationend', () => {
+                memberDiv.classList.remove('fade-in');
+            });
+
             container.appendChild(memberDiv);
         });
         itemArray.length = 0;
@@ -125,12 +129,11 @@ function initializeCarousel(itemArray, carouselNumber) {
     const yaTrack = document.querySelector(trackName);
     const prevButton3 = document.querySelector(`.prev-btn${carouselNumber}`);
     const nextButton3 = document.querySelector(`.next-btn${carouselNumber}`);
-    //const items3 = Array.from(document.querySelectorAll('.yakovlev-item'));
 
     const gap3 = getGap(yaTrack);
     const itemWidth = itemArray[0].offsetWidth + gap3;
 
-    let currentPosition = 0;
+    let currentPosition3 = 0;
 
     function moveCarousel2(position, transition = true) {
         yaTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
@@ -138,25 +141,25 @@ function initializeCarousel(itemArray, carouselNumber) {
     }
 
     nextButton3.addEventListener('click', () => {
-        if (currentPosition > -(itemWidth * (itemArray.length - 1))) {
-            currentPosition -= itemWidth;
-            moveCarousel2(currentPosition);
+        if (currentPosition3 > -(itemWidth * (itemArray.length - 1))) {
+            currentPosition3 -= itemWidth;
+            moveCarousel2(currentPosition3);
         } else {
             currentPosition3 = 0;
             setTimeout(() => {
-                moveCarousel2(currentPosition);
+                moveCarousel2(currentPosition3);
             }, 300);
         }
     });
 
     prevButton3.addEventListener('click', () => {
-        if (currentPosition < 0) {
-            currentPosition += itemWidth;
-            moveCarousel2(currentPosition);
+        if (currentPosition3 < 0) {
+            currentPosition3 += itemWidth;
+            moveCarousel2(currentPosition3);
         } else {
-            currentPosition = -(itemWidth * (itemArray.length - 1));
+            currentPosition3 = -(itemWidth * (itemArray.length - 1));
             setTimeout(() => {
-                moveCarousel2(currentPosition);
+                moveCarousel2(currentPosition3);
             }, 300);
         }
     });
