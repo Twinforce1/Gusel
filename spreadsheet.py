@@ -3,7 +3,7 @@ from time import sleep
 
 CREDENTIALS_PATH = "creds.json"
 gc = pygsheets.authorize(service_account_file=CREDENTIALS_PATH)
-sheetname = "TestTable"
+sheetname = "Формы для заполнения"
 
 def addToGoogleSheet(worksheet, content):
     sh = gc.open(sheetname)
