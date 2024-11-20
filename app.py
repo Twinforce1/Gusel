@@ -45,6 +45,10 @@ async def get_team(season: str = Query(...), team: str = Query(...)):
     return JSONResponse(content=data)
     
 
+@app.get("/download_images", response_class=HTMLResponse)
+async def get_images(request: Request):
+    return templates.TemplateResponse("Magic/index.html")
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("Main/index.html", {"request": request, "items": items})
@@ -110,7 +114,7 @@ async def post_story(request: Request,
     # Сохраняем файл на сервере
     with open(photo_path, "wb") as f:
         shutil.copyfileobj(photo.file, f)
-    addToGoogleSheet('Истории', [fullName, birthday, phone_number, story, str(photo_path)])
+    addToGoogleSheet('Истории', [fullName, birthday, "'" + phone_number, story, str(photo_path)])
     return RedirectResponse(url="/story_success", status_code=303)
 
 @app.get("/story_success", response_class=HTMLResponse)

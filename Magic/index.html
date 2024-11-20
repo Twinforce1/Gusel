@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка картинки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Загрузить картинку по ссылке</h1>
+    <label for="imageUrl">Введите URL изображения:</label>
+    <input type="text" id="imageUrl" placeholder="Введите URL картинки" />
+    <button onclick="loadImage()">Показать картинку</button>
+    <br>
+    <img id="image" style="display:none;" alt="Загруженная картинка" />
+
+    <script>
+        function loadImage() {
+            const imageUrl = document.getElementById('imageUrl').value;
+            const imageElement = document.getElementById('image');
+            
+            // Проверка на корректность URL
+            if (imageUrl) {
+                imageElement.src = imageUrl;
+                imageElement.style.display = 'block'; // Показываем картинку
+            } else {
+                alert('Введите корректный URL изображения!');
+            }
+        }
+    </script>
+</body>
+</html>
+
