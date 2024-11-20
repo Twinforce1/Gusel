@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Григорий Панин",
+        "image": "/static/Assets/Summer2024/Panin/Panin.jpg"
+    },
+    {
+        "name": "Егор Яковлев",
+        "image": "/static/Assets/Summer2024/Panin/Yakovlev.jpg"
+    },
+    {
+        "name": "Александр Будаков",
+        "image": "/static/Assets/Summer2024/Panin/Budakov.jpg"
+    },
+    {
+        "name": "Антон Пануфник",
+        "image": "/static/Assets/Summer2024/Panin/Panufnik.jpg"
+    },
+    {
+        "name": "Владимир Горяинов (Володя XXL)",
+        "image": "/static/Assets/Summer2024/Panin/Volodya.jpg"
+    },
+    {
+        "name": "Данил Башкиров",
+        "image": "/static/Assets/Summer2024/Panin/Bashkirov.jpg"
+    },
+    {
+        "name": "Егор Коробкин",
+        "image": "/static/Assets/Summer2024/Panin/Korobkin.jpg"
+    },
+    {
+        "name": "Илья Набоков",
+        "image": "/static/Assets/Summer2024/Panin/Nabokov.jpg"
+    },
+    {
+        "name": "Матвей Гуськов",
+        "image": "/static/Assets/Summer2024/Panin/Guskov.jpg"
+    },
+    {
+        "name": "Сергей Мозякин",
+        "image": "/static/Assets/Summer2024/Panin/Mozyakin.jpg"
+    },
+    {
+        "name": "Субхан Мамедов (SUBO)",
+        "image": "/static/Assets/Summer2024/Panin/Subo.jpg"
+    }
+]

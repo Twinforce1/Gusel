@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Алексей Гасилин (Гас)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Gasilin.jpg"
+    },
+    {
+        "name": "Антон Карпов (Чужой)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Chuzhoy.jpg"
+    },
+    {
+        "name": "Антон Кленов (Клён)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Klen.jpg"
+    },
+    {
+        "name": "Виталий Булаев (Була)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Bula.jpg"
+    },
+    {
+        "name": "Даниил Богатырев (Фикус)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Fikus.jpg"
+    },
+    {
+        "name": "Иван Бреднев (Млечный)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Mlechniy.jpg"
+    },
+    {
+        "name": "Ира Подшебякина",
+        "image": "/static/Assets/Summer2024/Yakovlev/Podshebyakina.jpg"
+    },
+    {
+        "name": "Максим Подлужный (Максело) ",
+        "image": "/static/Assets/Summer2024/Yakovlev/Makselo.jpg"
+    },
+    {
+        "name": "Степан Михович (Фанки)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Fanki.jpg"
+    },
+    {
+        "name": "Федор Маслов (Федос)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Fedos.jpg"
+    },
+    {
+        "name": "Феликс Карамянц (ФеликсФифа)",
+        "image": "/static/Assets/Summer2024/Yakovlev/Felix.jpg"
+    }
+]

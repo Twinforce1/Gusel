@@ -35,7 +35,7 @@ html {
 body {
     font-family: 'Gilroy', sans-serif;
     font-size: 1.3rem;
-    background-image: url(../Assets/back.jpg);
+    background-image: url(../Assets/Sprites/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -229,7 +229,6 @@ h1 {
 }
 
 .custom-map {
-    background-color: #fff;
     width: 41.67rem;
     height: 22.22rem;
     border-radius: 18px;

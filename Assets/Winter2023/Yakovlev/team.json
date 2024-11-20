@@ -4,6 +4,10 @@
         "image": "/static/Assets/Winter2023/Yakovlev/Yakovlev.jpg"
     },
     {
+        "name": "Антон Белов",
+        "image": "/static/Assets/Winter2023/Yakovlev/Belov.jpg"
+    },
+    {
         "name": "Елена Белова",
         "image": "/static/Assets/Winter2023/Yakovlev/Belova.jpg"
     },

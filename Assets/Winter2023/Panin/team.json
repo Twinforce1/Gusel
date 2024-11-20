@@ -4,6 +4,18 @@
         "image": "/static/Assets/Winter2023/Panin/Panin.jpg"
     },
     {
+        "name": "Михаил Карабельщиков",
+        "image": "/static/Assets/Winter2023/Panin/Karabelschikov.jpg"
+    },
+    {
+        "name": "Николай Кулемин",
+        "image": "/static/Assets/Winter2023/Panin/Kulemin.jpg"
+    },
+    {
+        "name": "Алексей Тропаревский",
+        "image": "/static/Assets/Winter2023/Panin/Troparevskiy.jpg"
+    },
+    {
         "name": "Данил Башкиров",
         "image": "/static/Assets/Winter2023/Panin/Bashkirov.jpg"
     },

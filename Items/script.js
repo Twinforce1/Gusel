@@ -43,19 +43,16 @@ prevButton2.addEventListener('click', () => {
     }
 });
 
-// Получаем основное изображение и все миниатюры
 const mainImage = document.querySelector('.main-image');
 const thumbnails = document.querySelectorAll('.thumbnail');
 
 mainImage.src = document.querySelector('.thumbnail.active').src;
 
-// Добавляем обработчик события для каждой миниатюры
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener('click', () => {
-        // Меняем источник основного изображения на источник миниатюры
+
         mainImage.src = thumbnail.src;
 
-        // Добавляем активный класс для выделения выбранной миниатюры
         thumbnails.forEach(thumb => thumb.classList.remove('active'));
         thumbnail.classList.add('active');
     });

@@ -36,7 +36,7 @@ html {
 body {
     font-family: 'Gilroy', sans-serif;
     font-size: 1.3rem;
-    background-image: url(../Assets/back.jpg);
+    background-image: url(../Assets/Sprites/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -322,8 +322,7 @@ h1 {
 .merch, .carousel {
     display: flex;
     overflow: hidden;
-    border-radius: 18px;
-    height: auto;
+    height: 40vh;
     vertical-align: bottom;
     width: 100%;
 }
@@ -331,10 +330,7 @@ h1 {
 .merch-item, .yakovlev-item, .panin-item {
     text-align: left;
     border-radius: 18px;
-    height: auto;
-    flex: 0 0 25%;
-    width: 4vw;
-    /* max-width: calc(25% - 1.11rem); */
+    flex: 0 0 314px;
     display: flex;
     flex-direction: column;
     vertical-align: bottom;
@@ -375,7 +371,7 @@ h1 {
 
 .merch-track, .yakovlev-track, .panin-track {
     gap: 0px 1.11rem;
-    height: auto;
+    height: 100%;
 }
 
 .photos1-track, .photos2-track {
@@ -393,7 +389,7 @@ h1 {
 
 .carousel-photo {
     width: 100%;
-    height: auto;
+    height: 75%;
     border-radius: 18px;
     object-fit: cover;
     object-position: center;

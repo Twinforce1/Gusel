@@ -116,7 +116,6 @@ async function loadTeam(season, teamName, itemArray) {
     }
 }
 
-
 async function loadYear(season) {
     await loadTeam(season, "Yakovlev", items3);
     await loadTeam(season, "Panin", items4);
@@ -165,45 +164,24 @@ function initializeCarousel(itemArray, carouselNumber) {
     });
 }
 
-// // Команда Панина
+function updateTitles(button) {
+    const yakovlevTitle = button.getAttribute("data-team1-title");
+    const paninTitle = button.getAttribute("data-team2-title");
 
-// const paninTrack = document.querySelector('.panin-track');
-// const prevButton4 = document.querySelector('.prev-btn4');
-// const nextButton4 = document.querySelector('.next-btn4');
-// //const items4 = Array.from(document.querySelectorAll('.panin-item'));
+    const yakovlevTitleElement = document.getElementById("team1-title");
+    const paninTitleElement = document.getElementById("team2-title");
 
-// const itemWidth4 = items4[0].offsetWidth + gap3;
+    yakovlevTitleElement.classList.remove("fade-in");
+    paninTitleElement.classList.remove("fade-in");
 
-// let currentPosition4 = 0;
+    setTimeout(() => {
+        yakovlevTitleElement.textContent = yakovlevTitle;
+        paninTitleElement.textContent = paninTitle;
 
-// function moveCarousel3(position, transition = true) {
-//     paninTrack.style.transition = transition ? 'transform 0.7s ease' : 'none';
-//     paninTrack.style.transform = `translateX(${position}px)`;
-// }
-
-// nextButton4.addEventListener('click', () => {
-//     if (currentPosition4 > -(itemWidth4 * (items4.length - 1))) {
-//         currentPosition4 -= itemWidth4;
-//         moveCarousel3(currentPosition4);
-//     } else {
-//         currentPosition4 = 0;
-//         setTimeout(() => {
-//             moveCarousel3(currentPosition4);
-//         }, 300);
-//     }
-// });
-
-// prevButton4.addEventListener('click', () => {
-//     if (currentPosition4 < 0) {
-//         currentPosition4 += itemWidth4;
-//         moveCarousel3(currentPosition4);
-//     } else {
-//         currentPosition4 = -(itemWidth4 * (items4.length - 1));
-//         setTimeout(() => {
-//             moveCarousel3(currentPosition4);
-//         }, 300);
-//     }
-// });
+        yakovlevTitleElement.classList.add("fade-in");
+        paninTitleElement.classList.add("fade-in");
+    }, 10);
+}
 
 //Автоматические карусели
 const intervalTime = 6000;
