@@ -201,6 +201,10 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     margin-right: 0.56rem;
 }
 
+.info-section {
+    width: 52rem;
+}
+
 h1 {
     color: #42c1c7;
     font-family: 'Gilroy', sans-serif;

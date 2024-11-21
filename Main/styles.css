@@ -274,6 +274,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     margin-top: 0px;
     margin-bottom: 1.94rem;
     font-weight: 400;
+    width: 51rem;
 }
 
 .about p {
@@ -552,7 +553,7 @@ h1 {
 }
 
 .footer-img {
-    margin-right: 0.28rem;
+    margin-right: 3px;
     vertical-align: middle;
 }
 

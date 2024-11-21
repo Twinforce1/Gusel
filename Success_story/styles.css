@@ -290,17 +290,7 @@ footer a:hover {
     html {
         font-size: 0.7rem;
     }
-/* 
-    .nav-text {
-        display: none;
-    }
 
-    .nav-icon {
-        width: 2.5rem;
-        color: #fff;
-        display: inline;
-    }
-     */
     nav ul li {
         margin: 0px 8rem 0px 0px;
     }
@@ -316,10 +306,6 @@ footer a:hover {
     html {
         font-size: 0.6rem;
     }
-
-    /* .logo-header {
-        display: none;
-    } */
 
     nav ul li {
         margin: 0px 7rem 0px 0px;
