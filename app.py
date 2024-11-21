@@ -47,7 +47,7 @@ async def get_team(season: str = Query(...), team: str = Query(...)):
 
 @app.get("/download_images", response_class=HTMLResponse)
 async def get_images(request: Request):
-    return templates.TemplateResponse("Magic/index.html")
+    return templates.TemplateResponse("Magic/index.html", {"request": request})
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
