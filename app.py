@@ -92,7 +92,7 @@ async def post_register(request: Request,
                         guardianPhone: str = Form(...),
                         agreement: bool = Form(...)):
 
-    addToGoogleSheet('Заявка на участие', [fullName, videoLink, position, preferredTeam, switchTeam, age, guardianName, guardianPhone, agreement])
+    addToGoogleSheet('Заявка на участие', [fullName, videoLink, position, preferredTeam, switchTeam, age, guardianName, "'" + guardianPhone, agreement])
     return RedirectResponse(url="/success_register", status_code=303)
 
 @app.get("/success_register", response_class=HTMLResponse)
