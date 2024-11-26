@@ -144,6 +144,34 @@
         
         <script src="/static/Form/script.js"></script>
         <script src="/static/common.js" defer></script>
+	<script>
+            document.getElementById('myForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Останавливаем стандартную отправку формы, чтобы проверить результат
+
+                const form = event.target;
+                const button = form.querySelector('.submit-button');
+
+                try {
+                    // Отправляем форму с помощью Fetch API
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                });
+
+                    if (response.ok) {
+                    // Если отправка успешна, скрываем кнопку и редиректим
+                       button.style.display = 'none';
+                       window.location.href = '/register'; // Перенаправление на целевой эндпоинт
+                    } else {
+                        // Если ошибка, сообщаем пользователю
+                       alert('Ошибка при отправке данных. Попробуйте снова.');
+                    }
+               } catch (error) {
+                    alert('Ошибка сети: ' + error.message);
+               }
+            });
+        </script>
     </div>
 </body>
 </html>
