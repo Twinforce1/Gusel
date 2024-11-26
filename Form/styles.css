@@ -162,6 +162,10 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     height: 2.45rem;
 }
 
+.text-title {
+    width: 51rem;
+}
+
 .header-button a, .form-group button {
     background: linear-gradient(90deg, #42c1c7, #7be8ee);
     border: none;
