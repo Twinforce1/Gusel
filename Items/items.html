@@ -2,12 +2,154 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>Уральская Классика - Атрибутика</title>
     <link rel="stylesheet" href="/static/Items/styles.css">
     <link rel="icon" href="/static/Assets/Sprites/logo.svg" type="image/x-icon">
 </head>
 <body>
+    
+    <div class="cart-button-container">
+        <div class="cart-count" id="cart-count">3</div>
+        <div class="cart-button" onclick="toggleCart()"><img src="/static/Assets/Sprites/cart.svg" class="cart-img"></div>
+    </div>
+
+    <div class="cart-menu">
+        <div class="cart-buttons">
+            <span class="close-button" onclick="toggleCart()"><img src="/static/Assets/Sprites/close-menu.svg" class="close-img"></span>
+        </div>
+        <div class="cart-header">
+            <h2>Корзина / 3 шт</h2>
+        </div>
+        <div class="cart-content">
+            <ul class="cart-items">
+                <li class="cartItem">
+                    <div class="cart-photo"></div>
+                    <p>Товар #1</p>
+                    <div class="right-part">
+                        <button class="delete-item"><img src="/static/Assets/Sprites/delete-item.svg" class="delete-item-img"></button>
+                        <select class="size-selector">
+                            <option value="" selected>Размер</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <p>200₽</p>
+                    </div>
+                </li>
+                <li class="cartItem">
+                    <div class="cart-photo"></div>
+                    <p>Товар #2</p>
+                    <div class="right-part">
+                        <button class="delete-item"><img src="/static/Assets/Sprites/delete-item.svg" class="delete-item-img"></button>
+                        <select class="size-selector">
+                            <option value="" selected>Размер</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <p>100₽</p>
+                    </div>
+                </li>
+                <li class="cartItem">
+                    <div class="cart-photo"></div>
+                    <p>Товар #3</p>
+                    <div class="right-part">
+                        <button class="delete-item"><img src="/static/Assets/Sprites/delete-item.svg" class="delete-item-img"></button>
+                        <select class="size-selector">
+                            <option value="" selected>Размер</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <p>100₽</p>
+                    </div>
+                </li>
+                <li class="cartItem">
+                    <div class="cart-photo"></div>
+                    <p>Товар #4</p>
+                    <div class="right-part">
+                        <button class="delete-item"><img src="/static/Assets/Sprites/delete-item.svg" class="delete-item-img"></button>
+                        <select class="size-selector">
+                            <option value="" selected>Размер</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <p>100₽</p>
+                    </div>
+                </li>
+            </ul>
+            <p class="all-in-all">Итого</p>
+            <p class="final-price">500₽</p>
+            <div class="cart-buttons">
+                <button class="checkout-button" onclick="proceedToCheckout()">Оформить заказ<img class="checkout-arrow" src="/static/Assets/Sprites/checkout-arrow.svg"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="checkout-menu">
+        <div class="checkout-buttons">
+            <span class="back-to-cart" onclick="back()"><img src="/static/Assets/Sprites/arrow2.svg" class="back-cart-img"></span>
+            <span class="close-button" onclick="toggleCart()"><img src="/static/Assets/Sprites/close-menu.svg" class="close-img"></span>
+        </div>
+        <div class="checkout-header">
+            <h2>Оформление заказа</h2>
+            <p>Поля со звездочкой (*) обязательны к заполнению</p>
+        </div>
+        <div class="checkout-content">
+            <form>
+                <div class="form-group">
+                    <p>Фамилия <span style="color: red;">*</span></p>
+                    <input type="text" id="surname" name="surname" required class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Имя <span style="color: red;">*</span></p>
+                    <input type="text" id="name" name="name" required class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Отчество <span style="color: red;">*</span></p>
+                    <input type="text" id="patronymic" name="patronymic" required class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Телефон <span style="color: red;">*</span></p>
+                    <input type="tel" id="guardianPhone" name="clientPhone" placeholder="+7 (___) ___-__-__" required class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Email</p>
+                    <input type="text" id="email" name="email" class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Примечания</p>
+                    <input type="text" id="notes" name="notes" class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Город <span style="color: red;">*</span></p>
+                    <input type="text" id="city" name="city" required class="inp">
+                </div>
+
+                <div class="form-group">
+                    <p>Пункт выдачи <span style="color: red;">*</span></p>
+                    <input type="text" id="pick-up" name="pick-up" required class="inp">
+                </div>
+
+                <div class="sdek-map">
+                    Интерактивная карта для выбора пункта выдачи СДЭК
+                </div>
+                
+                <div class="cart-buttons">
+                    <button type="submit" class="checkout-button">Оплатить заказ<img class="checkout-arrow" src="/static/Assets/Sprites/checkout-arrow.svg"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="main_container">
         <header>
             <nav>
@@ -80,7 +222,7 @@
                                     <img src="{{ i.image }}" alt="Элемент" class="carousel-photo" loading="lazy">
                                     <p>{{ i.name }}</p>
                                     <div class="price-add">
-                                        <a href="/item/{{ i.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/Sprites/shopping-bag.svg" alt="Корзина" class="button-img"> {{ i.price }} руб.</a>
+                                        <a href="/item/{{ i.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/Sprites/shopping-bag.svg" alt="Корзина" class="button-img"> {{ i.price }} ₽</a>
                                     </div>
                                 </div>
                             {% endfor %}
@@ -96,6 +238,11 @@
                 <a href="/" class="logo-ref">
                     <img src="/static/Assets/Sprites/haha-classic.png" alt="Лого" class="logo-footer">
                 </a>
+            </div>
+            <div class="foot4">
+                <p>ИНН: 2311352023
+                    ОГРН: 1232300041148
+                </p>
             </div>
             <div class="foot1">
                 <p>Хотите стать партнером?
@@ -114,6 +261,8 @@
         <script src="/static/common.js" defer></script>
         <script src="/static/Items/script.js" defer></script>
     </div>
+
+    <div class="mask-content" onclick="toggleCart()"></div>
 
 </body>
 </html>
