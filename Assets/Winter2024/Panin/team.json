@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Григорий Панин",
+        "image": "/static/Assets/Winter2024/Panin/Panin.jpg"
+    },
+    {
+        "name": "Игорь Огурцов",
+        "image": "/static/Assets/Winter2024/Panin/Ogurtsov.jpg"
+    },
+    {
+        "name": "Матвей Зубалевич",
+        "image": "/static/Assets/Winter2024/Panin/zubalevich.jpg"
+    },
+    {
+        "name": "Айдар Калимуллин",
+        "image": "/static/Assets/Winter2024/Panin/Kalimullin.jpg"
+    }
+]

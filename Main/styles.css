@@ -398,6 +398,13 @@ h1 {
     aspect-ratio: 1 / 1;
 }
 
+.carousel-photo:hover {
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(66,193,199,1);
+    -moz-box-shadow: 5px 5px 6px 0px rgba(66,193,199,1);
+    box-shadow: 5px 5px 6px 0px rgba(66,193,199,1); 
+    transition: box-shadow 0.4s ease;
+}
+
 .carousel2-photo {
     width: 10rem;
     height: auto;

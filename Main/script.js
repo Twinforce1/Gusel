@@ -118,10 +118,10 @@ async function loadTeam(season, teamName, itemArray) {
 
 async function loadYear(season) {
     await loadTeam(season, "Yakovlev", items3);
-    await loadTeam(season, "Panin", items4);
+    setTimeout(() => {loadTeam(season, "Panin", items4)}, 250);
 }
 
-loadYear("Winter2022");
+loadYear("Winter2024");
 
 function initializeCarousel(itemArray, carouselNumber) {
     let trackName = (carouselNumber == 3) ? '.yakovlev-track' : '.panin-track';
@@ -176,11 +176,15 @@ function updateTitles(button) {
 
     setTimeout(() => {
         yakovlevTitleElement.textContent = yakovlevTitle;
-        paninTitleElement.textContent = paninTitle;
 
         yakovlevTitleElement.classList.add("fade-in");
-        paninTitleElement.classList.add("fade-in");
     }, 10);
+
+    setTimeout(() => {
+        paninTitleElement.textContent = paninTitle;
+
+        paninTitleElement.classList.add("fade-in");
+    }, 250);
 }
 
 //Автоматические карусели
