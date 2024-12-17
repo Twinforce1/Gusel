@@ -560,6 +560,28 @@ h1 {
     text-align: left;
 }
 
+.partners_container {
+    display: flex;
+    align-items: center;
+    column-gap: 8.5rem;
+    row-gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.partners-link {
+    height: fit-content;
+}
+
+.partner-img {
+    filter: saturate(0);
+    cursor: pointer;
+}
+
+.partner-img:hover {
+    filter: saturate(1);
+    transition: filter 0.7s ease;
+}
+
 .footer-img {
     margin-right: 0.28rem;
     vertical-align: middle;
