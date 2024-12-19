@@ -29,7 +29,6 @@
 html {
     background-color: #000;
     z-index: -2;
-    font-size: 1vw;
 }
 
 body {
@@ -47,7 +46,7 @@ body {
 
 a {
     text-decoration-line: none;
-    border-radius: 18px;
+    border-radius: 1.125rem;
     height: 2.5rem;
 }
 
@@ -77,14 +76,14 @@ header {
     z-index: 1;
     transition: backdrop-filter 0.5s ease, background-color 0.5s ease; 
     background-color: transparent;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     margin-bottom: 2.2rem;
 }
 
 header.blur {
     backdrop-filter: blur(7px);
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50px;
+    border-radius: 3.125rem;
 }
 
 header::before {
@@ -98,7 +97,7 @@ header::before {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(70, 122, 127, 0.7));
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-    border-radius: 50px;
+    border-radius: 1.125rem;
 }
 
 header.blur::before {
@@ -171,7 +170,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     border: none;
     padding: 0.56rem 1.39rem;
     cursor: pointer;
-    border-radius: 18px;
+    border-radius: 1.125rem;
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
     font-size: 1.22rem;
@@ -230,7 +229,7 @@ h1 {
 .form-group input {
     padding: 0.56rem;
     border: 2px solid #42c1c7;
-    border-radius: 45px;
+    border-radius: 2.8125rem;
     background-color: white;
     color: #000;
     font-size: 0.89rem;
@@ -260,11 +259,11 @@ h1 {
 .checkbox {
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 18.75rem;
 }
 
 .form-group p {
-    margin: 0px 0 15px 0px;
+    margin: 0px 0 0.9375rem 0px;
     color: #42c1c7;
     font-weight: 700;
     width: 22.22rem;

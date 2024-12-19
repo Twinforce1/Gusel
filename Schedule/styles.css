@@ -47,7 +47,7 @@ body {
 
 a {
     text-decoration-line: none;
-    border-radius: 18px;
+    border-radius: 1.125rem;
     height: 2.5rem;
 }
 
@@ -77,14 +77,14 @@ header {
     z-index: 1;
     transition: backdrop-filter 0.5s ease, background-color 0.5s ease; 
     background-color: transparent;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     margin-bottom: 2.2rem;
 }
 
 header.blur {
     backdrop-filter: blur(7px);
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50px;
+    border-radius: 3.125rem;
 }
 
 header::before {
@@ -98,7 +98,7 @@ header::before {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(70, 122, 127, 0.7));
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-    border-radius: 50px;
+    border-radius: 3.125rem;
 }
 
 header.blur::before {
@@ -167,7 +167,7 @@ nav ul a.text-button-color::after, nav ul a.logo-ref::after {
     border: none;
     padding: 0.56rem 1.39rem;
     cursor: pointer;
-    border-radius: 18px;
+    border-radius: 1.125rem;
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
     font-size: 1.22rem;
@@ -206,38 +206,58 @@ h1 {
     margin-bottom: 2.22rem;
 }
 
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
 .directions {
-    margin-bottom: 4.44rem;
+    margin-bottom: 2.22rem;
 }
 
 .maps-links {
     display: flex;
     gap: 2.78rem;
-    margin-bottom: 4.44rem;
+    margin-bottom: 2.22rem;
     height: auto;
 }
 
 .map-link {
-    flex: 0 0 calc(50% - 2.78rem);
-    max-width: calc(50% - 2.78rem);
+    width: 38.89rem;
 }
 
 .map-placeholder {
     width: 100%;
-    height: auto;
-    border-radius: 18px;
+    height: 26rem;
+    border-radius: 1.125rem;
 }
 
 .custom-map {
     width: 41.67rem;
     height: 22.22rem;
-    border-radius: 18px;
+    border-radius: 1.125rem;
 }
 
 .map {
     display: flex;
     justify-content: center;
     margin-bottom: 3.33rem;
+}
+
+.schedule-block {
+    width: 38.89rem;
+}
+
+.schedule-container {
+    display: flex;
+    gap: 2.22rem;
+}
+
+.schedule-img {
+    border-radius: 1.125rem;
+    width: 38.89rem;
 }
 
 .footer-img {
@@ -334,6 +354,10 @@ footer a:hover {
 
     nav ul li {
         margin: 0px 7rem 0px 0px;
+    }
+
+    .schedule-img {
+        width: 32rem;
     }
 
 }
