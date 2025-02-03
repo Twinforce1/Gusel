@@ -277,10 +277,10 @@
                         <div class="merch-track">
                             {% for i in items %}
                                 <div class="merch-item">
-                                    <img src="{{ i.image }}" alt="Элемент" class="carousel-photo" loading="lazy">
+                                    <img src="{{ items[i].image }}" alt="Элемент" class="carousel-photo" loading="lazy">
                                     <p>{{ i.name }}</p>
                                     <div class="price-add">
-                                        <a href="/item/{{ i.id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/Sprites/shopping-bag.svg" alt="Корзина" class="button-img"> {{ i.price }} ₽</a>
+                                        <a href="/item/{{ items[i].id }}" class="text-button-color price" id="participants-id"><img src="/static/Assets/Sprites/shopping-bag.svg" alt="Корзина" class="button-img"> {{ i.price }} ₽</a>
                                     </div>
                                 </div>
                             {% endfor %}

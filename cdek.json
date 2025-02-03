@@ -2,71 +2,99 @@
     "0": {
         "name": "Бейсболка черная",
         "weight": "0.25",
-        "dimensions": "26*18*13"
+        "dimensions": "26*18*13",
+        "price": 2500,
+        "image": ""
     },
     "1": {
         "name": "Бейсболка бирюзовая",
         "weight": "0.25",
-        "dimensions": "26*18*13"
+        "dimensions": "26*18*13",
+        "price": 2500,
+        "image": ""
     },
     "2": {
         "name": "Джерси сублимация оранжевая",
         "weight": "0.5",
-        "dimensions": "30*30*3"
+        "dimensions": "30*30*3",
+        "price": 2500,
+        "image": ""
     },
     "3": {
         "name": "Джерси сублимация бирюзовая",
         "weight": "0.5",
-        "dimensions": "30*30*3"
+        "dimensions": "30*30*3",
+        "price": 2500,
+        "image": ""
     },
     "4": {
         "name": "Джерси оригинал оранжевая",
         "weight": "0.5",
-        "dimensions": "30*30*3"
+        "dimensions": "30*30*3",
+        "price": 2500,
+        "image": ""
     },
     "5": {
         "name": "Джерси оригинал бирюзовая",
         "weight": "0.5",
-        "dimensions": "30*30*3"
+        "dimensions": "30*30*3",
+        "price": 2500,
+        "image": ""
     },
     "6": {
         "name": "Шапка",
         "weight": "0.3",
-        "dimensions": "24*22*3"
+        "dimensions": "24*22*3",
+        "price": 2500,
+        "image": ""
     },
     "7": {
         "name": "Термокружка",
         "weight": "0.5",
-        "dimensions": "10*10*20"
+        "dimensions": "10*10*20",
+        "price": 2500,
+        "image": ""
     },
     "8": {
         "name": "Значок",
         "weight": "0.01",
-        "dimensions": "3*3*3"
+        "dimensions": "3*3*3",
+        "price": 2500,
+        "image": ""
     },
     "9": {
         "name": "Футболка детская",
         "weight": "0.3",
-        "dimensions": "25*23*3"
+        "dimensions": "25*23*3",
+        "price": 2500,
+        "image": ""
     },
     "10": {
         "name": "Сумка-шопер",
         "weight": "",
-        "dimensions": ""
+        "dimensions": "",
+        "price": 2500,
+        "image": ""
     },
     "11": {
         "name": "Шайба черная",
         "weight": "0.2",
-        "dimensions": "8*8*3"
+        "dimensions": "8*8*3",
+        "price": 2500,
+        "image": ""
     },
     "12": {
         "name": "Шайба синяя",
         "weight": "0.2",
-        "dimensions": "8*8*3"
+        "dimensions": "8*8*3",
+        "price": 2500,
+        "image": ""
     },
     "13": {
         "name": "Шайба оранжевая",
         "weight": "0.2",
-        "dimensions": "8*8*3"
+        "dimensions": "8*8*3",
+        "price": 2500,
+        "image": ""
     }
 }

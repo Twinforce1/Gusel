@@ -11,9 +11,9 @@ import shutil
 import uuid
 import httpx
 from spreadsheet import addToGoogleSheet
+import logging
 
 app = FastAPI()
-
 
 app.mount("/static", StaticFiles(directory="."), name="static")
 templates = Jinja2Templates(directory=".")
@@ -30,18 +30,29 @@ UPLOAD_DIR = Path("uploaded_photos")
 ASSETS_PATH = "./Assets"
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
-items_file_path = Path("items.json")
-print(items_file_path)
-if items_file_path.exists():
-    print("Located items.json")
-    with open(items_file_path, "r", encoding="utf-8") as f:
-        items = json.load(f)
-else:
-    print("No items.json located")
-    items = []
+# items_file_path = Path("items.json")
+# print(items_file_path)
+# if items_file_path.exists():
+#     print("Located items.json")
+#     with open(items_file_path, "r", encoding="utf-8") as f:
+#         items = json.load(f)
+# else:
+#     print("No items.json located")
+#     items = []
 
-print(items)
+def load_items(filename: str):
+    items_file_path = Path(filename)
 
+    if items_file_path.exists():
+        print("Located items.json")
+        with open(items_file_path, "r", encoding="utf-8") as f:
+            items = json.load(f)
+    else:
+        print("No items.json located")
+        items = {}
+    return items
+
+items = load_items("cdek.json")
 
 @app.get("/api/teams", response_class=JSONResponse)
 async def get_team(season: str = Query(...), team: str = Query(...)):
@@ -86,7 +97,7 @@ async def read_form_hero(request: Request):
 
 @app.get("/item/{item_id}", response_class=HTMLResponse)
 async def read_item(request: Request, item_id: int):
-    item = next((item for item in items if item["id"] == item_id), None)
+    item = items.get(str(item_id), None)
     if item is None:
         return {"error": "Item not found"}
     return templates.TemplateResponse("Items/items.html", {"request": request, "item": item, "items": items})
@@ -136,7 +147,7 @@ async def post_cart(request: Request,
                     clientPhone: str = Form(...),
                     email: str = Form(...),
                     notes: str = Form(...)):
-    url = "http://127.0.0.1:8888/cart.php"
+    url = "http://127.0.0.1:8888/cart.php" # php cart service
     fullName = " ".join([surname, name, patronymic])
     params = {"name": fullName, "phone": clientPhone, "email": email, "comment": notes}
 
