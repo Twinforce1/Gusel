@@ -2,18 +2,29 @@ from fastapi import FastAPI, Request, Form, UploadFile, File, Query, HTTPExcepti
 from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from starlette.middleware.cors import CORSMiddleware
 import uvicorn
 from pathlib import Path
 import os
 import json
 import shutil
 import uuid
+import httpx
 from spreadsheet import addToGoogleSheet
 
 app = FastAPI()
 
+
 app.mount("/static", StaticFiles(directory="."), name="static")
 templates = Jinja2Templates(directory=".")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 UPLOAD_DIR = Path("uploaded_photos")
 ASSETS_PATH = "./Assets"
@@ -116,6 +127,26 @@ async def post_story(request: Request,
         shutil.copyfileobj(photo.file, f)
     addToGoogleSheet('Истории', [fullName, birthday, "'" + phone_number, story, str(photo_path)])
     return RedirectResponse(url="/story_success", status_code=303)
+
+@app.post("/cart")
+async def post_cart(request: Request,
+                    name: str = Form(...),
+                    surname: str = Form(...),
+                    patronymic: str = Form(...),
+                    clientPhone: str = Form(...),
+                    email: str = Form(...),
+                    notes: str = Form(...)):
+    url = "http://127.0.0.1:8888/cart.php"
+    fullName = " ".join([surname, name, patronymic])
+    params = {"name": fullName, "phone": clientPhone, "email": email, "comment": notes}
+
+    async with httpx.AsyncClient() as client:
+        response = await client.post(url, data=params)
+    try:
+        return HTMLResponse(response.text)
+    except:
+        return "Увы"
+    
 
 @app.get("/story_success", response_class=HTMLResponse)
 async def read_story_success(request: Request):

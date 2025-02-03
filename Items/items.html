@@ -6,6 +6,58 @@
     <title>Уральская Классика - Атрибутика</title>
     <link rel="stylesheet" href="/static/Items/styles.css">
     <link rel="icon" href="/static/Assets/Sprites/logo.svg" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@cdek-it/widget@3" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery" type="text/javascript"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () =>
+        new window.CDEKWidget({
+            
+        defaultLocation: 'Новосибирск',
+          from: {
+            country_code: 'RU',
+            city: 'Новосибирск',
+            postal_code: 630009,
+            code: 270,
+            address: 'ул. Большевистская, д. 101',
+          },
+          root: 'cdek-map',
+          apiKey: '9c75ae59-9825-4064-aa16-f9765e1420ea',
+          canChoose: true,
+          servicePath: 'http://localhost:8888/service.php',
+          hideFilters: {
+            have_cashless: false,
+            have_cash: false,
+            is_dressing_room: false,
+            type: false,
+          },
+          hideDeliveryOptions: {
+            office: false,
+            door: true,
+          },
+          debug: false,
+          goods: [
+            {
+              width: 10,
+              height: 10,
+              length: 10,
+              weight: 10,
+            },
+          ],
+          lang: 'rus',
+          currency: 'RUB',
+          tariffs: {
+            office: [234, 136, 138],
+            door: [233, 137, 139],
+          },
+          onChoose(_type, tariff, address) {
+                // При выборе ПВЗ: запишем номер ПВЗ в текстовое поле и доп. информацию
+                document.querySelector('[name="chosenPost"]').value = address.name;
+                document.querySelector('[name="addresPost"]').value = address.address;
+                document.querySelector('[name="pricePost"]').value = tariff.delivery_sum;
+                document.querySelector('[name="timePost"]').value = tariff.period_max;
+          }
+        }));
+    </script>
 </head>
 <body>
     
@@ -98,7 +150,7 @@
             <p>Поля со звездочкой (*) обязательны к заполнению</p>
         </div>
         <div class="checkout-content">
-            <form>
+            <form action="/cart" method="post">
                 <div class="form-group">
                     <p>Фамилия <span style="color: red;">*</span></p>
                     <input type="text" id="surname" name="surname" required class="inp">
@@ -139,8 +191,14 @@
                     <input type="text" id="pick-up" name="pick-up" required class="inp">
                 </div>
 
-                <div class="sdek-map">
+                <div class="cdek-map", id="cdek-map">
                     Интерактивная карта для выбора пункта выдачи СДЭК
+                </div>
+                <div id="linkForWidjet" class="hidden">
+                    <p>Выбран пункт выдачи заказов: <input disabled name="chosenPost" type="text" value="" /></p>
+                    <p>Адрес пункта: <input disabled name="addresPost" type="text" value="" /></p>
+                    <p>Стоимость доставки: <input disabled name="pricePost" type="text" value="" /></p>
+                    <p>Примерные сроки доставки (дней): <input disabled name="timePost" type="text" value="" /></p>
                 </div>
                 
                 <div class="cart-buttons">
@@ -263,6 +321,6 @@
     </div>
 
     <div class="mask-content" onclick="toggleCart()"></div>
-
+    
 </body>
 </html>

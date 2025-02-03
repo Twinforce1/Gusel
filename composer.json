@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "mjelamanov/psr18-guzzle": "^1.6",
+        "cdek-it/sdk2.0": "^1.0"
+    }
+}
